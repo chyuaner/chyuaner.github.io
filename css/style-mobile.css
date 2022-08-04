@@ -1,8 +1,8 @@
 html{
-	height:100%;
+	/* height:100%; */
 }
 body{
-	height:100%;
+	/* height:100%; */
 	background-color: #F5F5F5;
 }
 
@@ -14,7 +14,7 @@ body{
 }
 #site-header nav{
 	margin-top: 25px;
-	text-align: center;
+	/* text-align: center; */
 }
 #site-header nav ul {
 	margin-left: inherit;
@@ -38,7 +38,7 @@ body{
 }
 #site-header nav ul li{
 	font-size: 20px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 }
 #site-header nav ul li a{
 	color: #AE8F8F;
