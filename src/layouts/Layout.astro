@@ -3,6 +3,8 @@ import "../assets/app.css";
 import MainData from '../data/main.json'
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+
+const path = Astro.url.pathname.replace(/\//g, '') || 'index';
 ---
 
 
@@ -20,7 +22,7 @@ import Footer from '../components/Footer.astro';
 			<Navbar />
 		</nav>
 		<main class="flex flex-1" data-barba="wrapper">
-			<div class="flex flex-1" data-barba="container" data-barba-namespace="home">
+			<div class="flex flex-1" data-barba="container" data-barba-namespace={path}>
 				<slot />
 			</div>
 		</main>

@@ -1,13 +1,8 @@
-import barba from '@barba/core';
 import gsap from 'gsap';
 
-export function initPageTransitions() {
-
-barba.init({
-  transitions: [
-    {
-      name: 'fade',
-      async leave(data) {
+export const defaultTransition = {
+  name: 'fade-footer',
+  async leave(data) {
         await Promise.all([
 					gsap.to(data.current.container, {
 						opacity: 0,
@@ -39,9 +34,5 @@ barba.init({
 					duration: 0.4,
 					ease: 'power2.out'
 				});
-      },
-    },
-  ],
-});
-
-}
+      }
+};
