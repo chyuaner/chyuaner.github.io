@@ -9,7 +9,7 @@ const isHome = currentPath === '';
   <div class="flex-1">
 		<div id="site-title-dock">
 			{!isHome && (
-				<div class="avatar">
+				<div class="avatar hidden md:inline-flex">
 					<div class="w-10 rounded-full">
 						<img
 							src={MainData.avatar.url}
