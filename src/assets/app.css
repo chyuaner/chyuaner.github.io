@@ -1,8 +1,9 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @plugin "daisyui" {
-  themes: nord --default, dracula --prefersdark;
+	themes: nord --default, dracula --prefersdark;
 }
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 
 .navbar .menu-active {
   @apply bg-primary text-primary-content font-semibold pointer-events-none;
