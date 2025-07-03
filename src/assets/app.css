@@ -2,3 +2,7 @@
 @plugin "daisyui" {
   themes: nord --default, dracula --prefersdark;
 }
+
+.navbar .menu-active {
+  @apply bg-primary text-primary-content font-semibold pointer-events-none;
+}

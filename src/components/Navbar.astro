@@ -1,19 +1,29 @@
-<div class="navbar bg-base-100 shadow-sm">
+---
+import MainData from '../data/main.json'
+
+const { pathname } = Astro.url;
+const currentPath = pathname.slice(1);
+const isHome = currentPath === '';
+---
+<div class="navbar bg-base-100 shadow-sm bg-neutral text-neutral-content">
   <div class="flex-1">
-    <a class="btn btn-ghost text-xl">daisyUI</a>
+		<div id="site-title-dock">
+			{!isHome && (
+				<div class="avatar">
+					<div class="w-10 rounded-full">
+						<img
+							src={MainData.avatar.url}
+						/>
+					</div>
+				</div>
+				<a class="btn btn-ghost text-xl" href="/">{MainData.name}</a>
+			)}
+		</div>
   </div>
   <div class="flex-none">
     <ul class="menu menu-horizontal px-1">
-      <li><a>Link</a></li>
-      <li>
-        <details>
-          <summary>Parent</summary>
-          <ul class="bg-base-100 rounded-t-none p-2">
-            <li><a>Link 1</a></li>
-            <li><a>Link 2</a></li>
-          </ul>
-        </details>
-      </li>
+      <li><a class={currentPath === 'works' ? 'menu-active' : ''} href="/works">相關作品</a></li>
+      <li><a class={currentPath === 'services' ? 'menu-active' : ''} href="/services">服務狀態</a></li>
     </ul>
   </div>
 </div>
