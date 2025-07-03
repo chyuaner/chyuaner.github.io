@@ -16,6 +16,7 @@ const path = Astro.url.pathname.replace(/\//g, '') || 'index';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{MainData.name}</title>
+		<script type="module" src="/src/pjax.js" defer></script>
 	</head>
 	<body class="flex flex-col min-h-screen bg-fancy">
 		<nav>
@@ -31,7 +32,6 @@ const path = Astro.url.pathname.replace(/\//g, '') || 'index';
 				<Footer />
 			</div>
 		</footer>
-		<script type="module" src="/src/pjax.js" defer></script>
 	</body>
 </html>
 

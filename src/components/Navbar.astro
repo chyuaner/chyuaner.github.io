@@ -3,21 +3,16 @@ import MainData from '../data/main.json'
 
 const { pathname } = Astro.url;
 const currentPath = pathname.slice(1);
-const isHome = currentPath === '';
 ---
 <div class="navbar bg-base-100 shadow-sm bg-zinc-800 text-neutral-content">
   <div class="flex-1">
-		<div id="site-title-dock">
-			{!isHome && (
-				<div class="avatar hidden md:inline-flex">
-					<div class="w-10 rounded-full">
-						<img
-							src={MainData.avatar.url}
-						/>
-					</div>
+		<div id="site-title-dock" class={currentPath === '' ? 'hidden' : 'flex'}>
+			<div class="avatar hidden md:inline-flex">
+				<div class="w-10 rounded-full">
+					<img src={MainData.avatar.url} />
 				</div>
-				<a class="btn btn-ghost text-xl" href="/">{MainData.name}</a>
-			)}
+			</div>
+			<a class="btn btn-ghost text-xl" href="/">{MainData.name}</a>
 		</div>
   </div>
   <div class="flex-none">
