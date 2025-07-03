@@ -1,10 +1,13 @@
 import barba from '@barba/core';
+import gsap from 'gsap';
 import { defaultTransition } from './pageTransitions.js';
+
+let barbaTimeline; // 全域 timeline 控制
 
 export function initBarba() {
 	// 播放當前頁面專用動畫
 	function runPageScript(namespace) {
-		import(`./pages/${namespace}.js`)
+		return import(`./pages/${namespace}.js`)
 			.then(mod => {
 				console.log(`載入 ${namespace} 頁面模組成功`);
 				mod.initPage?.();
@@ -12,15 +15,7 @@ export function initBarba() {
 			.catch(() => console.warn(`沒有找到 ${namespace} 頁面的 initPage`));
 	}
 
-	function runPageScriptWithPromise(namespace) {
-		return new Promise((resolve) => {
-			runPageScript(namespace);
-			// 假設執行完立即 resolve（若內部有動畫或延遲，可用 callback 或事件來觸發）
-			resolve();
-		});
-	}
-
-	function updateDockByNamespace(namespace) {
+	function updateDockByNamespace(namespace, tl) {
 		const navLinks = document.querySelectorAll('nav ul.menu li a');
 
 		// 1. 控制 active class
@@ -40,43 +35,80 @@ export function initBarba() {
 			navLinks.forEach(link => link.classList.remove('menu-active'));
 		}
 		
-	// 2. 控制首頁 vs 非首頁時的 site-title-dock 顯示
+		// 2. 控制首頁 vs 非首頁時的 site-title-dock 顯示
 		const dock = document.querySelector('#site-title-dock');
 		if (!dock) return;
 
-		if (namespace === 'index') {
-			// 不要呼叫 gsap.to，直接用 class 控制
-			dock.classList.remove('flex');
-			dock.classList.add('hidden');
-			dock.style.opacity = 0; // 清除 inline style，避免殘留透明度
-		} else {
-			dock.classList.add('flex');
-			dock.classList.remove('hidden');
-			dock.style.opacity = 1;
+		const isHome = namespace === '' || namespace === 'index';
+		const isDockVisible = dock.classList.contains('flex');
 
-			// gsap.to(dock, {
-			// 	opacity: 1,
-			// 	duration: 1,
-			// 	overwrite: 'auto'
-			// });
+		if (isHome && isDockVisible) {
+			// ⛔️ 當前為首頁，但 dock 是顯示狀態 → 淡出動畫
+			tl.to(dock, {
+				opacity: 0,
+				duration: 0.4,
+				ease: 'power2.in',
+				onComplete: () => {
+					dock.classList.remove('flex');
+					dock.classList.add('hidden');
+					dock.style.opacity = 0;
+				}
+			});
+		} else if (!isHome && !isDockVisible) {
+			// ⛔️ 當前不是首頁，但 dock 是隱藏狀態 → 淡入動畫
+			tl.fromTo(dock,
+				{ opacity: 0 },
+				{
+					opacity: 1,
+					duration: 0.6,
+					ease: 'power2.out',
+					onStart: () => {
+						dock.classList.add('flex');
+						dock.classList.remove('hidden');
+					},
+					onComplete: () => {
+						dock.style.opacity = 1;
+					}
+				}
+			);
+		} else {
+			// ✅ 狀態沒變，不做任何動畫
+			// console.log('dock 狀態未變，跳過動畫');
 		}
 	}
 
-  barba.init({
-    transitions: [
+	barba.init({
+		transitions: [
 			{
 				...defaultTransition, // 展開預設動畫設定
 				async once(data) {
-					await runPageScriptWithPromise(data.next.namespace);
-					updateNavbarActive(data.next.namespace);
+					await runPageScript(data.next.namespace);
+
+					// 初始化 timeline
+					if (barbaTimeline && barbaTimeline.isActive()) {
+						barbaTimeline.kill();
+					}
+					barbaTimeline = gsap.timeline();
+					updateDockByNamespace(data.next.namespace, barbaTimeline);
 				},
 				async afterEnter(data) {
-					await runPageScriptWithPromise(data.next.namespace);
-					updateDockByNamespace(data.next.namespace);
+					await runPageScript(data.next.namespace);
+
+					// 如果前一段 timeline 還在跑，先停止
+					if (barbaTimeline && barbaTimeline.isActive()) {
+						barbaTimeline.kill();
+					}
+
+					// 建立新的 timeline
+					barbaTimeline = gsap.timeline();
+					updateDockByNamespace(data.next.namespace, barbaTimeline);
+
+					// 你也可以繼續串入其他動畫，例如：
+					// barbaTimeline.from('.page-title', { opacity: 0, y: 20, duration: 0.5 });
 				}
 			}
 		],
-  });
+	});
 }
 
 initBarba();
