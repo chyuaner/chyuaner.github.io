@@ -5,7 +5,7 @@ const { pathname } = Astro.url;
 const currentPath = pathname.slice(1);
 const isHome = currentPath === '';
 ---
-<div class="navbar bg-base-100 shadow-sm bg-neutral text-neutral-content">
+<div class="navbar bg-base-100 shadow-sm bg-zinc-800 text-neutral-content">
   <div class="flex-1">
 		<div id="site-title-dock">
 			{!isHome && (
