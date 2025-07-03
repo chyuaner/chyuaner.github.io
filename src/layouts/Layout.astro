@@ -16,8 +16,8 @@ const path = Astro.url.pathname.replace(/\//g, '') || 'index';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{MainData.name}</title>
-		<script src="/vendor/gsap.min.js" is:inline></script>
-		<script src="/vendor/barba.umd.js" is:inline></script>
+		<script src="/vendor/gsap.js" is:inline></script>
+		<script src="/vendor/barba.js" is:inline></script>
 		<script type="module" src="/js/pjax.js" defer></script>
 	</head>
 	<body class="flex flex-col min-h-screen bg-fancy">
