@@ -1,10 +1,15 @@
 ---
-const { name, is_new, tags, img, description, links } = Astro.props;
+const { name, is_hide, is_new, tags, img, description, links } = Astro.props;
+if (is_hide) {
+  return null;
+}
+
+const imageUrl = img?.trim() ? img : 'https://fimg.yuaner.tw/500x300';
 ---
 
 <div class="card card-compact bg-base-100 shadow-sm">
 	<figure>
-		<img src={img} alt={name} />
+		<img src={imageUrl} alt={name} />
 	</figure>
 	<div class="card-body">
 		<header class="flex flex-col sm:flex-row">
@@ -15,14 +20,14 @@ const { name, is_new, tags, img, description, links } = Astro.props;
 				</h2>
 			</div>
 			<div class="flex-none justify-end card-title flex gap-2 flex-wrap">
-				{tags.map(tag => (
+				{tags?.length > 0 && tags.map(tag => (
 					<div class="badge badge-outline">{tag}</div>
 				))}
 			</div>
 		</header>
 		<p set:html={description}></p>
 		<div class="card-actions justify-end flex-wrap gap-2">
-			{links.map(link => (
+			{links?.length > 0 && links.map(link => (
 				<a href={link.href} class={`btn ${link.class}`}>{link.text}</a>
 			))}
 		</div>

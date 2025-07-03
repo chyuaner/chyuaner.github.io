@@ -25,9 +25,111 @@
           "href": "https://github.com/chyuaner/slide-Linux-SecureLUKSData"
         }
       ]
-    }
-    ,{
+    },
+    {
+      "name": "摩茲工寮 Telegram門鎖機器人",
+      "tags": [
+        "Telegram Bot"
+      ]
+    },
+    {
+      "name": "Dotfile Chezmoi 設定檔整理",
+      "img": "https://raw.githubusercontent.com/chyuaner/dotfiles/refs/heads/master/.readme/Screenshot_20250602_011037.png",
+      "tags": [
+        "chezmoi"
+      ],
+      "description": "2025重新以 Manjaro Linux / macOS 為主要的工作環境，重新整理出自己習慣又兼顧美觀的設定檔。",
+      "links": [
+        {
+          "text": "Github",
+          "class": "btn-primary",
+          "href": "https://github.com/chyuaner/dotfiles"
+        }
+      ]
+    },
+    {
+      "name": "JGB Smart Property",
+      "img": "imgs/jgbsmart.png",
+      "tags": [
+        "PHP",
+        "Laravel"
+      ],
+      "links": [
+        {
+          "text": "前往",
+          "class": "btn-primary",
+          "href": "https://www.jgbsmart.com"
+        }
+      ]
+    },
+    {
+      "name": "薪資落點分析",
+      "img": "imgs/chu-predict.png",
+      "tags": [
+        "前端"
+      ],
+      "links": [
+        {
+          "text": "前往",
+          "class": "btn-primary",
+          "href": "https://predict.chu.edu.tw"
+        },
+        {
+          "text": "Github",
+          "class": "",
+          "href": "https://github.com/chu-dblab/Prediction-UI"
+        }
+      ]
+    },
+    {
+      "name": "Error 451 網路全黑日Blackout",
+      "img": "imgs/moztw-err451.png",
+      "tags": [
+        "前端"
+      ],
+      "description": "響應 #網路全黑日，MozTW（Mozilla 台灣社群） 在此提供以下 Blackout 語法， 只要加到網站 &lt;/body&gt; 前方最後一行，使用者進站時即會看到 Blackout 451 畫面",
+      "links": [
+        {
+          "text": "Demo",
+          "class": "btn-primary",
+          "href": "https://moztw.org/events/blackout/"
+        },
+        {
+          "text": "Github",
+          "class": "",
+          "href": "https://github.com/moztw/TW-Error451-Blackout"
+        }
+      ]
+    },
+    {
+      "name": "無所不在學習導引機制之研製",
+      "tags": [
+        "PHP",
+        "Android",
+        "前端"
+      ]
+    },
+    {
+      "name": "來架網站吧",
+      "tags": [
+        "投影片"
+      ]
+    },
+    {
+      "name": "CXD活動宣傳",
+      "tags": [
+        "前端"
+      ]
+    },
+    {
+      "name": "CXD活動即時計分板",
+      "tags": [
+        "前端"
+      ]
+    },
+    {
       "name": "Card Title",
+      "is_hide": true,
       "is_new": false,
       "tags": [
         "Fashion",
