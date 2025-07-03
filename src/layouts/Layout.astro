@@ -16,11 +16,17 @@ import Footer from '../components/Footer.astro';
 		<title>{MainData.name}</title>
 	</head>
 	<body class="flex flex-col min-h-screen">
-		<Navbar />
-		<main class="flex-1">
+		<nav>
+			<Navbar />
+		</nav>
+		<main class="flex flex-1">
 			<slot />
 		</main>
-		<Footer />
+		<footer>
+			<div class="mx-auto">
+				<Footer />
+			</div>
+		</footer>
 	</body>
 </html>
 
