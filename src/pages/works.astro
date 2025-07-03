@@ -20,14 +20,21 @@ import Layout from '../layouts/Layout.astro';
 								alt="Shoes" />
 						</figure>
 						<div class="card-body">
-							<h2 class="card-title">
-								Card Title
-								<div class="badge badge-secondary">NEW</div>
-							</h2>
+							<header class="flex flex-col sm:flex-row">
+								<div class="flex-auto">
+									<h2 class="card-title">
+										現代化開機與資料安全的Linux作業系統環境
+										<div class="badge badge-secondary">NEW</div>
+									</h2>
+								</div>
+								<div class="flex-none justify-end card-title">
+									<div class="badge badge-outline">Fashion</div>
+									<div class="badge badge-outline">Products</div>
+								</div>
+							</header>
 							<p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
 							<div class="card-actions justify-end">
-								<div class="badge badge-outline">Fashion</div>
-								<div class="badge badge-outline">Products</div>
+								<button class="btn btn-primary">Buy Now</button>
 							</div>
 						</div>
 					</div>
