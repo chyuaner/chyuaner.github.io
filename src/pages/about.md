@@ -33,5 +33,10 @@ Bootstrap、Foundation 這類傳統 CSS Framework，本身就帶很多預設組�
 
 
 ### Pjax動態局部換頁技術
+* 使用者點選連結時，不刷新整個頁面
+* 僅更新主要內容區塊（例如 &lt;main&gt; 或 #pjax-container）
+* 支援瀏覽器前進/後退
+* 支援動畫效果（淡出舊頁 → 換內容 → 淡入新頁）
+* 不破壞 SEO（仍能 Fallback 到原始 HTML）
 
 ### 動畫效果

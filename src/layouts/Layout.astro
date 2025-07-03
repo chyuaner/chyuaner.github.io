@@ -19,14 +19,17 @@ import Footer from '../components/Footer.astro';
 		<nav>
 			<Navbar />
 		</nav>
-		<main class="flex flex-1">
-			<slot />
+		<main class="flex flex-1" data-barba="wrapper">
+			<div class="flex flex-1" data-barba="container" data-barba-namespace="home">
+				<slot />
+			</div>
 		</main>
 		<footer>
 			<div class="mx-auto">
 				<Footer />
 			</div>
 		</footer>
+		<script type="module" src="/src/main.js" defer></script>
 	</body>
 </html>
 
