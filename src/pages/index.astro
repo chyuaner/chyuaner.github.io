@@ -13,15 +13,17 @@ import Layout from '../layouts/Layout.astro';
 		<div class="container mx-auto px-4 lg:px-32 py-8">
 			<div class="hero">
 				<div class="hero-content flex-col lg:flex-row gap-16">
-					<img
+					<img id="main-avatar"
 						src={MainData.avatar.url}
 						class="max-w-sm rounded-lg shadow-2xl"
 					/>
 					<div>
-						<h1 id="site-title" class="text-5xl font-bold">{MainData.name}</h1>
-						<p class="py-6">
-							喜歡自由軟體，長期使用Linux作為主要用作業系統，也擁有Proxmox VE, VMware ESXi架設經驗。主要以PHP Laravel後端為主。
-						</p>
+						<div id="main-content">
+							<h1 id="site-title" class="text-5xl font-bold">{MainData.name}</h1>
+							<p class="py-6">
+								喜歡自由軟體，長期使用Linux作為主要用作業系統，也擁有Proxmox VE, VMware ESXi架設經驗。主要以PHP Laravel後端為主。
+							</p>
+						</div>
 
 						<div id="contact-links" class="text-3xl p-2">
 							<ul class="flex gap-8 justify-center lg:justify-start">
