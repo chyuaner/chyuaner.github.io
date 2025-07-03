@@ -6,6 +6,8 @@ dist/
 
 # dependencies
 node_modules/
+public/vendor/barba.js
+public/vendor/gsap.js
 
 # logs
 npm-debug.log*

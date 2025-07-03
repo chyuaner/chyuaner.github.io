@@ -1,10 +1,8 @@
-import barba from '@barba/core';
-import gsap from 'gsap';
 import { defaultTransition } from './pageTransitions.js';
 
 let barbaTimeline; // 全域 timeline 控制
 
-export function initBarba() {
+function initBarba() {
 	// 播放當前頁面專用動畫
 	function runPageScript(namespace) {
 		return import(`./pages/${namespace}.js`)

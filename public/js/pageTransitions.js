@@ -1,5 +1,3 @@
-import gsap from 'gsap';
-
 export const defaultTransition = {
   name: 'fade-footer',
   async leave(data) {
