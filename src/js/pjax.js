@@ -1,9 +1,9 @@
 import barba from '@barba/core';
-import { defaultTransition } from './scripts/pageTransitions.js';
+import { defaultTransition } from './pageTransitions.js';
 
 // 播放當前頁面專用動畫
 function runPageScript(namespace) {
-  import(`./scripts/pages/${namespace}.js`)
+  import(`./pages/${namespace}.js`)
     .then(mod => {
       console.log(`載入 ${namespace} 頁面模組成功`);
       mod.initPage?.();
