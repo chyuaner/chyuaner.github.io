@@ -2,6 +2,42 @@
   "name": "Yuan Chiu",
   "avatar": {
     "url": "https://gravatar.com/avatar/39d6ecc6926e02f7241c8d9225f9eb5a6491a6f13cfaf6ef261b4e44dbd6be55?s=300"
-  }
-    
+  },
+  
+  "works": [
+    {
+      "name": "現代化開機與資料安全的Linux作業系統環境",
+      "is_new": false,
+      "tags": [
+        "投影片"
+      ],
+      "img": "https://yuaner.tw/slide-Linux-SecureLUKSData/img/cover.png",
+      "description": "LUKS2 + TPM + UKI .efi + SecureBoot<br>都以Manjaro Linux (Arch Linux)為主",
+      "links": [
+        {
+          "text": "Demo",
+          "class": "btn-primary",
+          "href": "https://yuaner.tw/slide-Linux-SecureLUKSData/"
+        },
+        {
+          "text": "Github",
+          "class": "",
+          "href": "https://github.com/chyuaner/slide-Linux-SecureLUKSData"
+        }
+      ]
+    },
+    {
+      "name": "Card Title",
+      "is_new": false,
+      "tags": [
+        "Fashion",
+        "Products"
+      ],
+      "img": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+      "description": "A card component has a figure, a body part, and inside body there are title and actions parts",
+      "links": [
+      ]
+    }
+
+  ]
 }
