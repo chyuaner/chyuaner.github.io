@@ -213,7 +213,8 @@
       "status_html": "<img src='https://status.yuaner.tw/api/badge/4/status'>",
       "is_new": false,
       "tags": [
-        "Blog"
+        "Blog",
+        "g"
       ],
       "img": "imgs/yuan-blog.png",
       "description": "2025重新以 hexo 架設的全新部落格<br>之後技術筆記、心得、日記寫文都會發布在這邊！",
@@ -231,7 +232,8 @@
       "status_html": "<img src='https://status.yuaner.tw/api/badge/28/status'>",
       "is_new": false,
       "tags": [
-        "Blog"
+        "Blog",
+        "g"
       ],
       "img": "imgs/yuan-blog-legacy.png",
       "description": "將Wordpress舊站靜態化以後存放<br>不再積極維護更新",
@@ -249,6 +251,7 @@
       "status_html": "<img src='https://status.yuaner.tw/api/badge/14/status'>",
       "is_new": false,
       "tags": [
+        "n"
       ],
       "img": "imgs/yuan-git.png",
       "description": "",
@@ -266,6 +269,7 @@
       "status_html": "<img src='https://status.yuaner.tw/api/badge/30/status'>",
       "is_new": false,
       "tags": [
+        "j"
       ],
       "img": "imgs/yuan-piwik.png",
       "description": "",
@@ -283,6 +287,7 @@
       "status_html": "<img src='https://status.yuaner.tw/api/badge/18/status'>",
       "is_new": false,
       "tags": [
+        "l"
       ],
       "img": "imgs/yuan-bitwarden.png",
       "description": "",
@@ -300,6 +305,7 @@
       "status_html": "<img src='https://status.yuaner.tw/api/badge/16/status'>",
       "is_new": false,
       "tags": [
+        "n"
       ],
       "img": "imgs/yuan-music.png",
       "description": "",
