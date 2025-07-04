@@ -28,7 +28,7 @@ const imageUrl = img?.trim() ? img : 'https://fimg.yuaner.tw/500x300';
 		<p set:html={description}></p>
 		<div class="card-actions justify-end flex-wrap gap-2">
 			{links?.length > 0 && links.map(link => (
-				<a href={link.href} class={`btn ${link.class}`}>{link.text}</a>
+				<a href={link.href} target="_blank" class={`btn ${link.class}`}>{link.text}</a>
 			))}
 		</div>
 	</div>
