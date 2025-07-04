@@ -107,6 +107,16 @@ function initBarba() {
 			}
 		],
 	});
+
+
+	barba.hooks.after((data) => {
+		// const path = data.next.url.path;
+		
+		// 處理Matomo追蹤更新
+		_paq.push(['setCustomUrl', window.location.href]);
+		_paq.push(['setDocumentTitle', document.title]);
+		_paq.push(['trackPageView']);
+	});
 }
 
 initBarba();
