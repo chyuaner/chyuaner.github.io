@@ -28,8 +28,16 @@
     },
     {
       "name": "摩茲工寮 Telegram門鎖機器人",
+      "img": "imgs/moztw-doortg.png",
       "tags": [
         "Telegram Bot"
+      ],
+      "links": [
+        {
+          "text": "Github",
+          "class": "",
+          "href": "https://github.com/moztw/moztw_doorlock_bot"
+        }
       ]
     },
     {
@@ -107,24 +115,80 @@
         "PHP",
         "Android",
         "前端"
+      ],
+      "links": [
+        {
+          "text": "Server",
+          "class": "",
+          "href": "https://github.com/chu-dblab/E-learning-Server-v2"
+        },
+        {
+          "text": "APP",
+          "class": "",
+          "href": "https://github.com/chu-dblab/E-learning-Android-v2"
+        },
+        {
+          "text": "教材",
+          "class": "",
+          "href": "https://github.com/chu-dblab/E-learning-Material"
+        }
       ]
     },
     {
       "name": "來架網站吧",
+      "img": "imgs/slide-make-website.png",
       "tags": [
         "投影片"
+      ],
+      "links": [
+        {
+          "text": "Demo (待修)",
+          "class": "btn-primary btn-disabled",
+          "href": "#"
+        },
+        {
+          "text": "Github",
+          "class": "",
+          "href": "https://github.com/chyuaner/slide-make-a-website"
+        }
       ]
     },
     {
       "name": "CXD活動宣傳",
+      "img": "imgs/cxd-event.png",
       "tags": [
         "前端"
+      ],
+      "links": [
+        {
+          "text": "Demo",
+          "class": "btn-primary",
+          "href": "https://rm-demo.yuaner.tw/"
+        },
+        {
+          "text": "Github",
+          "class": "",
+          "href": "https://github.com/chyuaner/rayark-cxd-score-screen"
+        }
       ]
     },
     {
       "name": "CXD活動即時計分板",
+      "img": "imgs/cxd-score.png",
       "tags": [
         "前端"
+      ],
+      "links": [
+        {
+          "text": "Demo",
+          "class": "btn-primary",
+          "href": "https://github.com/chyuaner/rayark-cxd-score-screen"
+        },
+        {
+          "text": "Github",
+          "class": "",
+          "href": "https://github.com/chyuaner/rayark-cxd-street-battle-website"
+        }
       ]
     },
     {
