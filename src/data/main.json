@@ -142,9 +142,9 @@
       ],
       "links": [
         {
-          "text": "Demo (待修)",
-          "class": "btn-primary btn-disabled",
-          "href": "#"
+          "text": "Demo",
+          "class": "btn-primary",
+          "href": "https://slide-make-a-website.yuaner.tw/"
         },
         {
           "text": "Github",
