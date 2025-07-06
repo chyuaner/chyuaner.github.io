@@ -246,7 +246,7 @@
       ]
     },
     {
-      "name": "Uptime Kuma 服務監測站",
+      "name": "服務監測站",
       "subname": "https://status.yuaner.tw",
       "status_html": "<img src='https://status.yuaner.tw/api/badge/37/status'>",
       "is_new": false,
@@ -254,7 +254,7 @@
         "j"
       ],
       "img": "imgs/yuan-upkuma.png",
-      "description": "",
+      "description": "以 Uptime Kuma 架設的即時網站服務監測站",
       "links": [
         {
           "text": "前往",
@@ -264,7 +264,7 @@
       ]
     },
     {
-      "name": "Gitea Git Server",
+      "name": "Git Server",
       "subname": "https://git.yuaner.tw",
       "status_html": "<img src='https://status.yuaner.tw/api/badge/14/status'>",
       "is_new": false,
@@ -272,7 +272,7 @@
         "n"
       ],
       "img": "imgs/yuan-git.png",
-      "description": "",
+      "description": "以 Gitea 架設的私人用Git Server",
       "links": [
         {
           "text": "前往",
@@ -290,12 +290,12 @@
         "l"
       ],
       "img": "https://barian0517.github.io/mcserverweb/Minecraft%20Screenshot%202025.06.26%20-%2001.23.07.95.png",
-      "description": "",
+      "description": "Java伺服器版本，為朋友架設在我的主機上的Minecraft伺服器。",
       "links": [
       ]
     },
     {
-      "name": "Piwik Matomo 網站追蹤",
+      "name": "網站追蹤站",
       "subname": "https://piwik.yuaner.tw",
       "status_html": "<img src='https://status.yuaner.tw/api/badge/30/status'>",
       "is_new": false,
@@ -303,7 +303,7 @@
         "j"
       ],
       "img": "imgs/yuan-piwik.png",
-      "description": "",
+      "description": "以 Piwik Matomo 架設的網站追蹤站",
       "links": [
         {
           "text": "前往",
@@ -313,7 +313,7 @@
       ]
     },
     {
-      "name": "Vaultwarden",
+      "name": "密碼管理庫",
       "subname": "",
       "status_html": "<img src='https://status.yuaner.tw/api/badge/18/status'>",
       "is_new": false,
@@ -321,12 +321,12 @@
         "l"
       ],
       "img": "imgs/yuan-bitwarden.png",
-      "description": "",
+      "description": "以 Vaultwarden 架設的密碼管理庫",
       "links": [
       ]
     },
     {
-      "name": "Navidrome 音樂站",
+      "name": "線上音樂站",
       "subname": "https://music.yuaner.tw",
       "status_html": "<img src='https://status.yuaner.tw/api/badge/16/status'>",
       "is_new": false,
@@ -334,7 +334,7 @@
         "n"
       ],
       "img": "imgs/yuan-music.png",
-      "description": "",
+      "description": "以 Navidrome 架設的線上音樂站",
       "links": [
         {
           "text": "前往",
