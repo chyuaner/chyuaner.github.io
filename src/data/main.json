@@ -246,6 +246,24 @@
       ]
     },
     {
+      "name": "Uptime Kuma 服務監測站",
+      "subname": "https://status.yuaner.tw",
+      "status_html": "<img src='https://status.yuaner.tw/api/badge/37/status'>",
+      "is_new": false,
+      "tags": [
+        "j"
+      ],
+      "img": "imgs/yuan-upkuma.png",
+      "description": "",
+      "links": [
+        {
+          "text": "前往",
+          "class": "btn-primary",
+          "href": "https://status.yuaner.tw"
+        }
+      ]
+    },
+    {
       "name": "Gitea Git Server",
       "subname": "https://git.yuaner.tw",
       "status_html": "<img src='https://status.yuaner.tw/api/badge/14/status'>",
@@ -261,6 +279,19 @@
           "class": "btn-primary",
           "href": "https://git.yuaner.tw"
         }
+      ]
+    },
+    {
+      "name": "Minecraft",
+      "subname": "",
+      "status_html": "<img src='https://status.yuaner.tw/api/badge/26/status'>",
+      "is_new": false,
+      "tags": [
+        "l"
+      ],
+      "img": "https://barian0517.github.io/mcserverweb/Minecraft%20Screenshot%202025.06.26%20-%2001.23.07.95.png",
+      "description": "",
+      "links": [
       ]
     },
     {
@@ -283,7 +314,7 @@
     },
     {
       "name": "Vaultwarden",
-      "subname": "https://bitwarden.yuaner.tw",
+      "subname": "",
       "status_html": "<img src='https://status.yuaner.tw/api/badge/18/status'>",
       "is_new": false,
       "tags": [
@@ -292,11 +323,6 @@
       "img": "imgs/yuan-bitwarden.png",
       "description": "",
       "links": [
-        {
-          "text": "前往",
-          "class": "btn-primary",
-          "href": "https://bitwarden.yuaner.tw"
-        }
       ]
     },
     {
@@ -314,6 +340,26 @@
           "text": "前往",
           "class": "btn-primary",
           "href": "https://music.yuaner.tw"
+        }
+      ]
+    },
+    {
+      "name": "Card Title",
+      "is_hide": true,
+      "subname": "Card Sub Title",
+      "status_html": "<img src='https://fimg.yuaner.tw/70x20?text=Status'>",
+      "is_new": false,
+      "tags": [
+        "Fashion",
+        "Products"
+      ],
+      "img": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+      "description": "A card component has a figure, a body part, and inside body there are title and actions parts",
+      "links": [
+        {
+          "text": "前往",
+          "class": "btn-primary",
+          "href": "#"
         }
       ]
     }
