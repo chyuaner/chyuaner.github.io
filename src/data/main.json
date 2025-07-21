@@ -283,7 +283,7 @@
     },
     {
       "name": "Minecraft",
-      "subname": "",
+      "subname": "mcserver.barian.moe:24565",
       "status_html": "<img src='https://status.yuaner.tw/api/badge/26/status'>",
       "is_new": false,
       "tags": [
@@ -292,6 +292,11 @@
       "img": "https://barian0517.github.io/mcserverweb/Minecraft%20Screenshot%202025.06.26%20-%2001.23.07.95.png",
       "description": "Java伺服器版本，為朋友架設在我的主機上的Minecraft伺服器。",
       "links": [
+        {
+          "text": "前往",
+          "class": "btn-primary",
+          "href": "https://mcweb.barian.moe"
+        }
       ]
     },
     {
