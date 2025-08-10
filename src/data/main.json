@@ -6,6 +6,48 @@
   
   "works": [
     {
+      "name": "Minecraft 客戶端模組同步程式",
+      "is_new": false,
+      "tags": [
+        "Python"
+      ],
+      "img": "imgs/mc-pysync.png",
+      "description": "我們經營的伺服器為NeoForge模組伺服器，使用者必須安裝對應的模組才能連進我們的伺服器遊玩。考量我們伺服器對於模組需求的更動頻繁，故特別寫了這支小程式來減輕使用者每次都要手動下載檔案的麻煩。",
+      "links": [
+        {
+          "text": "Download",
+          "class": "btn-primary",
+          "href": "https://github.com/chyuaner/python-minecraft-mods-sync/releases"
+        },
+        {
+          "text": "Github",
+          "class": "",
+          "href": "https://github.com/chyuaner/python-minecraft-mods-sync"
+        }
+      ]
+    },
+    {
+      "name": "Minecraft 資訊橋接後端API伺服器",
+      "is_new": false,
+      "tags": [
+        "PHP"
+      ],
+      "img": "imgs/mc-bapi.png",
+      "description": "輔助Minecraft伺服器的PHP後端。主要有模組列表、zip打包下載功能提供給我們自己的客戶端模組同步程式、我們的官網使用。額外提供伺服器上線人數查詢。 ",
+      "links": [
+        {
+          "text": "Demo & Docs",
+          "class": "btn-primary",
+          "href": "https://api-minecraft.yuaner.tw/"
+        },
+        {
+          "text": "Github",
+          "class": "",
+          "href": "https://github.com/chyuaner/php-minecraft-server-info"
+        }
+      ]
+    },
+    {
       "name": "現代化開機與資料安全的Linux作業系統環境",
       "is_new": false,
       "tags": [
