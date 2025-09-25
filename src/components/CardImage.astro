@@ -11,9 +11,9 @@ let isEmpty = typeof src === "string" && src?.trim();
 ---
 
 {isImported ? (
-  <Image src={src} width="500" height="300" {...attrs} />
+  <Image src={src} width="750" height="450" {...attrs} />
 ) : isRemote ? (
-  <Image src={src} width="500" height="300" {...attrs} />
+  <Image src={src} width="750" height="450" {...attrs} />
 ) : isStringPath? (
   <img src={src} {...attrs} />
 ) : (
