@@ -16,6 +16,10 @@ export function initPage() {
 		y: -50,
     opacity: 0,
     duration: 0.5,
-		stagger: 0.2
+		stagger: {
+			each: 0.1,
+			amount: 0,
+			start: 0 // 從第一個元素開始，不延遲整個動畫
+		},
   });
 }
