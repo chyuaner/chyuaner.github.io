@@ -7,7 +7,7 @@ function initBarba() {
 	function runPageScript(namespace) {
 		return import(`./pages/${namespace}.js`)
 			.then(mod => {
-				console.log(`載入 ${namespace} 頁面模組成功`);
+				// console.log(`載入 ${namespace} 頁面模組成功`);
 				mod.initPage?.();
 			})
 			.catch(() => console.warn(`沒有找到 ${namespace} 頁面的 initPage`));
