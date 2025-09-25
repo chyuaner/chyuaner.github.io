@@ -1,0 +1,26 @@
+---
+const { src, ...attrs } = Astro.props;
+import { Image } from 'astro:assets';
+
+// 判斷方式：URL, import物件, public相對路徑
+let isRemote = typeof src === "string" && src.startsWith("http");
+let isImported = typeof src === "object"; // import回來的會是物件
+let isStringPath = typeof src === "string" && !isRemote;
+let isEmpty = typeof src === "string" && src?.trim();
+
+---
+
+{isImported ? (
+  <Image src={src} width="500" height="300" {...attrs} />
+) : isRemote ? (
+  <Image src={src} width="500" height="300" {...attrs} />
+) : isStringPath? (
+  <img src={src} {...attrs} />
+) : (
+	<img src='https://fimg.yuaner.tw/500x300' {...attrs} />
+)}
+
+<style>
+  img {
+  }
+</style>

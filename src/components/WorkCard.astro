@@ -1,15 +1,15 @@
 ---
+import CardImage from "./CardImage.astro";
+
 const { name, is_hide, is_new, tags, img, description, links } = Astro.props;
 if (is_hide) {
   return null;
 }
-
-const imageUrl = img?.trim() ? img : 'https://fimg.yuaner.tw/500x300';
 ---
 
 <div class="card card-compact bg-base-100 shadow-sm">
 	<figure>
-		<img src={imageUrl} alt={name} />
+		<CardImage src={img} alt={name} />
 	</figure>
 	<div class="card-body">
 		<header class="flex flex-col sm:flex-row">
