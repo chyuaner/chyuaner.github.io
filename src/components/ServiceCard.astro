@@ -1,4 +1,6 @@
 ---
+import CardImage from "./CardImage.astro";
+
 const { name, is_hide, subname, status_html, is_new, tags, img, description, links } = Astro.props;
 if (is_hide) {
   return null;
@@ -7,13 +9,9 @@ if (is_hide) {
 ---
 
 <div class="card card-compact bg-base-100 shadow-sm">
-	{img?.trim() && (
-		<>
-			<figure>
-				<img src={img} alt={name} />
-			</figure>
-		</>
-	)}
+	<figure>
+		<CardImage src={img} alt={name} />
+	</figure>
 	<div class="card-body">
 		<header class="flex flex-row">
 			<div class="flex-auto">

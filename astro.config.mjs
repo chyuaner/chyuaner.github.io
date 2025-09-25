@@ -8,6 +8,6 @@ export default defineConfig({
         plugins: [tailwindcss()],
     },
 		image: {
-			domains: ["astro.build", "raw.githubusercontent.com"],
+			domains: ["astro.build", "raw.githubusercontent.com", "barian0517.github.io"],
 		},
 });
