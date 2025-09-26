@@ -14,21 +14,21 @@ export const defaultTransition = {
 						duration: 0.4,
 						ease: 'power2.out'
 					}),
-					gsap.to('.bg-fancy', {
-						opacity: 0,
-						duration: 0.4,
-						ease: 'none'
-					})
+					// gsap.to('.bg-fancy', {
+					// 	opacity: 0,
+					// 	duration: 0.4,
+					// 	ease: 'none'
+					// })
 				]);
       },
       enter(data) {
-				gsap.fromTo('.bg-fancy', {
-					opacity: 0,
-				}, {
-					opacity: 1,
-					duration: 0.4,
-					ease: 'none'
-				});
+				// gsap.fromTo('.bg-fancy', {
+				// 	opacity: 0,
+				// }, {
+				// 	opacity: 1,
+				// 	duration: 0.4,
+				// 	ease: 'none'
+				// });
         gsap.from(data.next.container, {
 					opacity: 0,
 					y: 20,

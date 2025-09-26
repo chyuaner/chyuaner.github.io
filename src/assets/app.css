@@ -9,9 +9,9 @@
   @apply bg-primary text-primary-content font-semibold pointer-events-none;
 }
 
-html {
+/* html {
 	background: #eceff4;
-}
+} */
 .bg-fancy {
 	background: #eceff4;
   background: linear-gradient(135deg,  #f6f8f9 0%, #e5ebee 50%, #d7dee3 56%, #f5f7f9 100%);
@@ -23,9 +23,9 @@ html {
 		--color-primary: #A2BD8C;
 	}
 
-	html {
+	/* html {
     background: #353a52;
-	}
+	} */
   .bg-fancy {
     background: #353a52;
 		/* background: #414558; */
