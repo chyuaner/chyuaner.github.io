@@ -20,7 +20,9 @@ const path = Astro.url.pathname.replace(/\//g, '') || 'index';
 		<script src="/vendor/barba.js" is:inline></script>
 		<script type="module" src="/js/pjax.js" defer></script>
 	</head>
-	<body class="flex flex-col min-h-screen bg-fancy">
+	<body class="flex flex-col min-h-screen">
+		<!-- 背景層 -->
+  <div id="bg-fancy" class="fixed inset-0 -z-10 bg-fancy"></div>
 		<nav>
 			<Navbar />
 		</nav>
