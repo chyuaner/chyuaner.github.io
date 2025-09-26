@@ -1,9 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">
-    <path d="M50.4 78.5a75.1 75.1 0 0 0-28.5 6.9l24.2-65.7c.7-2 1.9-3.2 3.4-3.2h29c1.5 0 2.7 1.2 3.4 3.2l24.2 65.7s-11.6-7-28.5-7L67 45.5c-.4-1.7-1.6-2.8-2.9-2.8-1.3 0-2.5 1.1-2.9 2.7L50.4 78.5Zm-1.1 28.2Zm-4.2-20.2c-2 6.6-.6 15.8 4.2 20.2a17.5 17.5 0 0 1 .2-.7 5.5 5.5 0 0 1 5.7-4.5c2.8.1 4.3 1.5 4.7 4.7.2 1.1.2 2.3.2 3.5v.4c0 2.7.7 5.2 2.2 7.4a13 13 0 0 0 5.7 4.9v-.3l-.2-.3c-1.8-5.6-.5-9.5 4.4-12.8l1.5-1a73 73 0 0 0 3.2-2.2 16 16 0 0 0 6.8-11.4c.3-2 .1-4-.6-6l-.8.6-1.6 1a37 37 0 0 1-22.4 2.7c-5-.7-9.7-2-13.2-6.2Z" />
-    <style>
-        path { fill: #000; }
-        @media (prefers-color-scheme: dark) {
-            path { fill: #FFF; }
-        }
-    </style>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="47.972656"
+   height="51.254292"
+   viewBox="0 0 47.972656 51.254292"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient6">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0.1914694"
+         id="stop6" />
+      <stop
+         style="stop-color:#5a7543;stop-opacity:1;"
+         offset="0.54753357"
+         id="stop7" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient6"
+       id="linearGradient7"
+       x1="20.039845"
+       y1="59.116493"
+       x2="20.039845"
+       y2="33.805786"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1752417,0,0,1.1752418,0.05937732,-20.000108)" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-0.0136719,-0.0136719)">
+    <path
+       style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;fill:#242427;fill-opacity:1;stroke:#ffffff;stroke-width:6;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+       d="M 24,3.0136719 C 12.418087,3.0136719 3.0136719,12.418165 3.0136719,24 3.0136719,35.581835 12.418087,44.986328 24,44.986328 35.581913,44.986328 44.986328,35.581835 44.986328,24 44.986328,12.418165 35.581913,3.0136719 24,3.0136719 Z m 0,1.5 C 34.771259,4.5136719 43.486328,13.228831 43.486328,24 43.486328,34.771169 34.771259,43.486328 24,43.486328 13.228741,43.486328 4.5136719,34.771169 4.5136719,24 4.5136719,13.228831 13.228741,4.5136719 24,4.5136719 Z"
+       id="ellipse1" />
+    <ellipse
+       style="display:inline;fill:none;stroke:#000000;stroke-width:4;stroke-dasharray:none;paint-order:stroke fill markers"
+       id="path1"
+       cx="24"
+       cy="24"
+       rx="20.237"
+       ry="20.236847" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:39.2528px;line-height:1.25;font-family:'Font Awesome 6 Free';-inkscape-font-specification:'Font Awesome 6 Free';fill:#5a7543;fill-opacity:1;stroke:url(#linearGradient7);stroke-width:0.51123;stroke-dasharray:none;stroke-opacity:1"
+       x="8.8912687"
+       y="49.399403"
+       id="text1"
+       transform="scale(1.0164735,0.98379344)"><tspan
+         id="tspan1"
+         x="8.8912687"
+         y="49.399403"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-family:'Font Awesome 6 Free';-inkscape-font-specification:'Font Awesome 6 Free Heavy';fill:#5a7543;fill-opacity:1;stroke:url(#linearGradient7);stroke-width:0.51123;stroke-dasharray:none;stroke-opacity:1">Y</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:19.2952px;line-height:1.25;font-family:sans-serif;fill:#f1fa8c;fill-opacity:1;stroke-width:0.723564"
+       x="9.9687033"
+       y="-19.5693"
+       id="text2"
+       transform="scale(1.521667,-0.65717402)"><tspan
+         id="tspan2"
+         x="9.9687033"
+         y="-19.5693"
+         style="fill:#f1fa8c;fill-opacity:1;stroke-width:0.723564">:)</tspan></text>
+  </g>
 </svg>
