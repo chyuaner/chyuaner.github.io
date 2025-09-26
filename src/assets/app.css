@@ -15,7 +15,13 @@
 
 /* Dark mode 時覆蓋背景 */
 @media (prefers-color-scheme: dark) {
+	:root {
+		--color-primary: #A2BD8C;
+	}
+
   .bg-fancy {
-    background: none; /* 或 dark 顏色，如 #000 */
+    background: none;
+		/* background: #414558; */
+background: linear-gradient(149deg,rgba(40, 42, 54, 1) 0%, rgba(51, 54, 69, 1) 13%, rgba(53, 58, 82, 1) 30%, rgba(44, 47, 62, 1) 53%, rgba(40, 42, 54, 1) 93%, rgba(62, 54, 71, 1) 100%);
   }
 }
