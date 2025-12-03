@@ -5,6 +5,7 @@ import ServiceCard from '../components/ServiceCard.astro';
 import yuanblog from '../assets/services/yuan-blog.png';
 import yuanbloglegacy from '../assets/services/yuan-blog-legacy.png';
 import yuanupkuma from '../assets/services/yuan-upkuma.png';
+import yuanai from '../assets/services/yuan-ai.png';
 import yuangit from '../assets/services/yuan-git.png';
 import yuanpiwik from '../assets/services/yuan-piwik.png';
 import yuanbitwarden from '../assets/services/yuan-bitwarden.png';
@@ -64,6 +65,34 @@ let services = [
           "text": "前往",
           "class": "btn-primary",
           "href": "https://status.yuaner.tw"
+        }
+      ]
+    },
+    {
+      "name": "AI LLM",
+      "subname": "https://ai.yuaner.tw",
+      "status_html": "",
+      "is_new": false,
+      "tags": [
+        "n"
+      ],
+      "img": yuanai,
+      "description": "以 LiteLLM 架設的私人用AI LLM <p>Demo帳號密碼: demo@yuaner.tw / demo</p><p>PS. 若看不到可用模型，代表Demo專用額度已用盡，請明天再來</p>",
+      "links": [
+        {
+          "text": "Open WebUI",
+          "class": "btn-primary",
+          "href": "https://ai.yuaner.tw"
+        },
+        {
+          "text": "Firefox",
+          "class": "",
+          "href": "https://github.com/chyuaner/firefox-yuan-ai-sidebar/releases/"
+        },
+        {
+          "text": "Telegram",
+          "class": "",
+          "href": "https://t.me/yuaner_llm_demo_bot"
         }
       ]
     },
