@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import WorkCard from '../components/WorkCard.astro';
 
+import echo from '../assets/works/yuan-echo.png';
 import mcpysync from '../assets/works/mc-pysync.png';
 import mcbapi from '../assets/works/mc-bapi.png';
 import jgbsmart from '../assets/works/jgbsmart.png';
@@ -12,6 +13,32 @@ import cxdevent from '../assets/works/cxd-event.png';
 import cxdscore from '../assets/works/cxd-score.png';
 
 let works = [
+    {
+      "name": "HTTP Echo Server",
+      "is_new": false,
+      "tags": [
+        "CDN"
+      ],
+      "img": echo,
+      "description": "<p>本專案是提供CDN Edge層級的http回音鸚鵡伺服器（也提供本機端獨立運作的方式）</p><p>就如字面上所說的，你對我發出的Request後，我的伺服器就會把我從你這邊接到的資訊：以什麼網址字串、帶了什麼Post Body、Request Header，一五一實的以ResponseBody方式回應給你。</p><p>同時也可以當作MyIP查詢使用，會顯示在「Host」區塊。</p>",
+      "links": [
+        {
+          "text": "Demo",
+          "class": "btn-primary",
+          "href": "https://echo.yuaner.tw/assets/text/dict/textpar.html?ref=tablericons&utm_source=tablericons-mainsite&utm_medium=partner&utm_campaign=250k-more-icons&tab=all"
+        },
+        {
+          "text": "Github",
+          "class": "",
+          "href": "https://github.com/chyuaner/cloudflare-echo-server"
+        },
+        {
+          "text": "簡介與開發心得",
+          "class": "",
+          "href": "https://yuaner.tw/slide-cloudflare-echo-server/"
+        }
+      ]
+    },
     {
       "name": "Minecraft 客戶端模組同步程式",
       "is_new": false,
