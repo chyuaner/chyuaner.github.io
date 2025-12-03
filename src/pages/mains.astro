@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MainCard from '../components/MainCard.astro';
+---
+
+<Layout>
+	<div class="container mx-auto px-4 xl:px-30 py-4">
+		<article>
+			<header class="prose my-6 flex w-full items-center justify-between gap-4 max-w-full mx-0">
+				<h2 class="flex mb-0">主要服務與作品</h2>
+				<a class="flex ml-auto" href="https://status.yuaner.tw">前往完整的狀態頁</a>
+			</header>
+			<div class="bg-base-content/10 mx-1 h-px mb-8"></div>
+
+			<div class="content">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+					
+					<MainCard mainImgSrc="https://fimg.yuaner.tw/1024x768" mainImgAlt="Album"
+						buttons={[
+							{ text: "GitHub", class: "btn-primary", href: "https://github.com" },
+							{ text: "Docs", href: "/docs" },
+							{ text: "Contact", href: "/contact" },
+						]}
+					>
+						<h2 class="card-title">New album is released!</h2>
+						<p>Click the button to listen on Spotiwhy app.</p>
+						<div class="card-actions justify-end">
+							<button class="btn btn-primary">Listen</button>
+						</div>
+					</MainCard>
+
+				</div>
+			</div>
+		</article>
+	</div>
+</Layout>

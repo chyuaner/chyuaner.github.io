@@ -1,0 +1,42 @@
+---
+import CardImage from "./CardImage.astro";
+
+const { is_hide, vertical=false, colSpan: initialColSpan, exClass="", mainImgSrc, mainImgAlt,
+	buttons = [
+  //   { text: "Button 1", href: "#" },
+  //   { text: "Button 2", href: "#" },
+  //   { text: "Button 3", href: "#" },
+  ],
+} = Astro.props;
+
+let colSpan = initialColSpan;
+if (!colSpan) {
+  colSpan = vertical ? 1 : 3;   // vertical → 3 格；水平 → 1 格
+}
+
+if (is_hide) {
+  return null;
+}
+
+---
+
+<div class=`col-span-${colSpan} ${exClass} card ${vertical ? '' : 'md:card-side'} bg-base-100 shadow-sm dark:shadow-neutral-600 grid grid-cols-12 gap-4`>
+	{mainImgSrc && (
+		<figure class={`col-span-12 ${vertical ? '' : 'md:col-span-3'} flex items-center justify-center`}>
+			<CardImage src={mainImgSrc} alt={mainImgAlt} class="w-full h-auto object-cover" />
+		</figure>
+	)}
+
+	<div class=`col-span-12 ${vertical ? '' : 'md:col-span-9'} flex-1 flex flex-col`>
+		<div class="card-body">
+    	<slot />
+		</div>
+		<div class="join join-vertical md:join-horizontal mt-auto self-end">
+			{buttons.map((btn) => (
+        <a href={btn.href} class=`${btn.class} btn join-item`>
+          {btn.text}
+        </a>
+      ))}
+		</div>
+  </div>
+</div>
