@@ -1,7 +1,7 @@
 ---
 import CardImage from "./CardImage.astro";
 
-const { is_hide, vertical=false, colSpan: initialColSpan, exClass="", mainImgSrc, mainImgAlt,
+const { is_hide, vertical=false, colSpan: initialColSpan, exClass="", mainImgSrc, mainImgAlt="",
 	buttons = [
   //   { text: "Button 1", href: "#" },
   //   { text: "Button 2", href: "#" },
@@ -11,7 +11,7 @@ const { is_hide, vertical=false, colSpan: initialColSpan, exClass="", mainImgSrc
 
 let colSpan = initialColSpan;
 if (!colSpan) {
-  colSpan = vertical ? 1 : 3;   // vertical → 3 格；水平 → 1 格
+  colSpan = vertical ? 2 : 12;
 }
 
 if (is_hide) {
