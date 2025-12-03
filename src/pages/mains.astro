@@ -1,6 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import MainCard from '../components/MainCard.astro';
+import { Code } from 'astro:components';
+
+import yuanai from '../assets/services/yuan-ai.png';
 ---
 
 <Layout>
@@ -14,17 +17,88 @@ import MainCard from '../components/MainCard.astro';
 
 			<div class="content">
 				<div class="grid grid-cols-1 md:grid-cols-6 gap-4">
-					<MainCard mainImgSrc="https://fimg.yuaner.tw/1024x768" mainImgAlt="Album"
+
+					<MainCard mainImgSrc={yuanai} mainImgAlt="AI"
+						buttons={[
+							{ text: "Open WebUI", class: "btn-primary", href: "https://ai.yuaner.tw" },
+							{ text: "Telegram Bot", href: "https://t.me/yuaner_llm_bot" },
+							{ text: "Firefox Sidebar", href: "https://github.com/chyuaner/firefox-yuan-ai-sidebar/releases/" },
+						]}
+					>
+						<h2 class="card-title">AI LiteLLM GPT</h2>
+						<div class="flex w-full flex-col lg:flex-row">
+							<div class="card grid grow prose text-sm">
+								<p>以 LiteLLM 架設的私人用AI LLM</p>
+								<h4 class="mt-0 mb-0">API Base:    <small>(OpenAI Compatible)</small></h4>
+								<Code code={`https://ai.yuaner.tw/v1`} class="h-[3.8em] p-3 rounded-lg shadow-sm" />
+
+								<div class="divider mt-0 mb-0"></div>
+
+								<div class="grow place-items-center">
+									<div class="shadow grid grid-cols-2 md:grid-cols-3">
+										<div class="stat">
+											<div class="stat-title">Downloads</div>
+											<div class="stat-value">31K</div>
+											<div class="stat-desc">Jan 1st - Feb 1st</div>
+										</div>
+
+										<div class="stat">
+											<div class="stat-title">New Users</div>
+											<div class="stat-value">4,200</div>
+											<div class="stat-desc">↗︎ 400 (22%)</div>
+										</div>
+
+										<div class="stat">
+											<div class="stat-title">New Registers</div>
+											<div class="stat-value">1,200</div>
+											<div class="stat-desc">↘︎ 90 (14%)</div>
+										</div>
+									</div>
+								</div>
+								
+								
+								<!-- <p>Click the button to listen on Spotiwhy app.</p>
+								<div class="card-actions justify-end">
+									<button class="btn btn-primary">Listen</button>
+								</div> -->
+							</div>
+							<div class="divider lg:divider-horizontal"></div>
+							<div class="card grid grow prose text-sm">
+								<h4>Demo 專用帳號</h4>
+								<ul class="mb-0">
+									<li>API Key: sk-lAiSr-BHX-Oyf-cJE6p7Nw</li>
+									<li>API Base: https://ai.yuaner.tw/v1</li>
+									<li>
+										Open WebUI登入資訊
+										<ul>
+											<li>Email: demo@yuaner.tw</li>
+											<li>Password: demo</li>
+										</ul>
+									</li>
+									<li>Telegram: <a href="https://t.me/yuaner_llm_demo_bot"</a>@yuaner_llm_demo_bot</a></li>
+								</ul>
+								<p>PS. 若看不到可用模型，代表Demo專用額度已用盡，請明天再來</p>
+							</div>
+						</div>
+					</MainCard>
+
+					<MainCard mainImgSrc="https://barian0517.github.io/mcserverweb/Minecraft%20Screenshot%202025.06.26%20-%2001.23.07.95.png" mainImgAlt="Minecraft"
 						buttons={[
 							{ text: "GitHub", class: "btn-primary", href: "https://github.com" },
 							{ text: "Docs", href: "/docs" },
 							{ text: "Contact", href: "/contact" },
 						]}
 					>
-						<h2 class="card-title">New album is released!</h2>
-						<p>Click the button to listen on Spotiwhy app.</p>
-						<div class="card-actions justify-end">
-							<button class="btn btn-primary">Listen</button>
+
+						<h2 class="card-title">幽影櫻minecraft server</h2>
+						<p>融合 魔法、拔刀劍 與槍械 的極致體驗。</p>
+						<Code code={`closingsongserver.barian.moe`} class="p-4 rounded-lg text-sm shadow-sm" />
+
+						<fieldset class="fieldset bg-base-200 border-base-300 rounded-box border p-4">
+							<legend class="fieldset-legend">子專案</legend>
+							
+							<p class="label">You can edit page title later on from settings</p>
+						</fieldset>
 						</div>
 					</MainCard>
 				</div>
