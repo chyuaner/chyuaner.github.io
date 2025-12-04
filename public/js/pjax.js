@@ -44,19 +44,21 @@ function initBarba() {
 		const isHome = namespace === '' || namespace === 'index';
     const isHidden = siteTitle.classList.contains('md:opacity-0');
 
-    if (isHome && !isHidden) {
-      // ⛔️ 首頁 → 隱藏 site-title（淡出動畫）
+    const isDesktop = window.innerWidth >= 768; // Tailwind 的 md 斷點預設為 768px
+
+    if (isHome && !isHidden && isDesktop) {
+      // ⛔️ 首頁 → 隱藏 site‑title（僅在桌面版執行淡出動畫）
       tl.to(siteTitle, {
         opacity: 0,
         duration: 0.4,
         ease: 'power2.in',
         onComplete: () => {
           siteTitle.classList.add('md:opacity-0');
-          siteTitle.style.opacity = 0;
+          siteTitle.style.opacity = 0; // 只在桌面版會被看到
         }
       });
-    } else if (!isHome && isHidden) {
-      // ⛔️ 非首頁 → 顯示 site-title（淡入動畫）
+    } else if (!isHome && isHidden && isDesktop) {
+      // ⛔️ 非首頁 → 顯示 site‑title（僅在桌面版執行淡入動畫）
       tl.fromTo(
         siteTitle,
         { opacity: 0 },
@@ -73,9 +75,16 @@ function initBarba() {
         }
       );
     } else {
-      // ✅ 狀態未變，無需動畫
-      // console.log('site-title 狀態未變，跳過動畫');
+      // ✅ 其他情況（如行動版）直接確保 class 正確、避免不必要的 inline opacity
+      if (isHome) {
+        siteTitle.classList.add('md:opacity-0');
+        siteTitle.style.opacity = ''; // 移除行動版可能殘留的 inline style
+      } else {
+        siteTitle.classList.remove('md:opacity-0');
+        siteTitle.style.opacity = '';
+      }
     }
+    
   }
 
 	barba.init({
