@@ -9,44 +9,44 @@ if (is_hide) {
 ---
 
 <div class="card card-compact bg-base-100 shadow-sm dark:shadow-neutral-600">
-	<figure>
-		<CardImage src={img} alt={name} />
-	</figure>
-	<div class="card-body">
-		<header class="flex flex-row">
-			<div class="flex-auto">
-				<h2 class="card-title" style="opacity: 1;">
-					{name}
-					{is_new && <div class="badge badge-secondary">NEW</div>}
-				</h2>
-				<p>{subname}</p>
-			</div>
-			<div class="flex-none justify-end card-title flex gap-2 flex-wrap">
-				<div set:html={status_html}></div>
-			</div>
-		</header>
-		<div class="h-full grid grid-cols-1 items-end">
+  <figure>
+    <CardImage src={img} alt={name} />
+  </figure>
+  <div class="card-body">
+    <header class="flex flex-row">
+      <div class="flex-auto">
+        <h2 class="card-title" style="opacity: 1;">
+          {name}
+          {is_new && <div class="badge badge-secondary">NEW</div>}
+        </h2>
+        <p>{subname}</p>
+      </div>
+      <div class="flex-none justify-end card-title flex gap-2 flex-wrap">
+        <div set:html={status_html}></div>
+      </div>
+    </header>
+    <div class="h-full grid grid-cols-1 items-end">
 
-			{description?.trim() && (
-				<>
-					<div class="bg-base-content/10 mx-1 h-px mb-2"></div>
-					<p set:html={description}></p>
-				</>
-			)}
-	
-			<div class="flex flex-col gap-2 sm:flex-row sm:items-end mt-6">
-				<div class="flex-auto">
-					{tags?.length > 0 && tags.map(tag => (
-						<div class="badge badge-outline mr-2">{tag}</div>
-					))}
-				</div>
-				<div class="card-actions justify-end flex-wrap gap-2">
-					{links?.length > 0 && links.map(link => (
-						<a href={link.href} target="_blank" class={`btn ${link.class}`}>{link.text}</a>
-					))}
-				</div>
-			</div>
+      {description?.trim() && (
+        <>
+          <div class="bg-base-content/10 mx-1 h-px mb-2"></div>
+          <p set:html={description}></p>
+        </>
+      )}
+  
+      <div class="flex flex-col gap-2 sm:flex-row sm:items-end mt-6">
+        <div class="flex-auto">
+          {tags?.length > 0 && tags.map(tag => (
+            <div class="badge badge-outline mr-2">{tag}</div>
+          ))}
+        </div>
+        <div class="card-actions justify-end flex-wrap gap-2">
+          {links?.length > 0 && links.map(link => (
+            <a href={link.href} target="_blank" class={`btn ${link.class}`}>{link.text}</a>
+          ))}
+        </div>
+      </div>
 
-		</div>
-	</div>
+    </div>
+  </div>
 </div>

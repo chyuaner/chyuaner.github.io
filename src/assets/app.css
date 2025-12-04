@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @plugin "daisyui" {
-	themes: nord --default, dracula --prefersdark;
+  themes: nord --default, dracula --prefersdark;
 }
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -10,25 +10,25 @@
 }
 
 /* html {
-	background: #eceff4;
+  background: #eceff4;
 } */
 .bg-fancy {
-	background: #eceff4;
+  background: #eceff4;
   background: linear-gradient(135deg,  #f6f8f9 0%, #e5ebee 50%, #d7dee3 56%, #f5f7f9 100%);
 }
 
 /* Dark mode 時覆蓋背景 */
 @media (prefers-color-scheme: dark) {
-	:root {
-		--color-primary: #A2BD8C;
-	}
+  :root {
+    --color-primary: #A2BD8C;
+  }
 
-	/* html {
+  /* html {
     background: #353a52;
-	} */
+  } */
   .bg-fancy {
     background: #353a52;
-		/* background: #414558; */
-		background: linear-gradient(149deg,rgba(40, 42, 54, 1) 0%, rgba(51, 54, 69, 1) 13%, rgb(53, 58, 82) 30%, rgba(44, 47, 62, 1) 53%, rgba(40, 42, 54, 1) 93%, rgba(62, 54, 71, 1) 100%);
+    /* background: #414558; */
+    background: linear-gradient(149deg,rgba(40, 42, 54, 1) 0%, rgba(51, 54, 69, 1) 13%, rgb(53, 58, 82) 30%, rgba(44, 47, 62, 1) 53%, rgba(40, 42, 54, 1) 93%, rgba(62, 54, 71, 1) 100%);
   }
 }

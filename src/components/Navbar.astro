@@ -18,11 +18,11 @@ const currentPath = pathname.slice(1);
   </div>
 
   <!-- ---------- 第二列：導覽選單 ----------
-       手機 (xs) 時置中、桌面 (md+) 時右對齊 -->
+      手機 (xs) 時置中、桌面 (md+) 時右對齊 -->
   <div class="mt-2 md:mt-0 flex md:self-auto self-center">
     <ul class="menu menu-horizontal flex flex-wrap gap-2
-               justify-center  /* 手機置中 */
-               md:justify-end   /* 桌面右對齊 */">
+              justify-center  /* 手機置中 */
+              md:justify-end   /* 桌面右對齊 */">
       <li><a class={currentPath === 'mains' ? 'menu-active' : ''} href="/mains">主要服務與作品</a></li>
       <li><a class={currentPath === 'works' ? 'menu-active' : ''} href="/works">相關作品</a></li>
       <li><a class={currentPath === 'services' ? 'menu-active' : ''} href="/services">服務狀態</a></li>

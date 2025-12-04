@@ -11,91 +11,91 @@ import mcpysync from '../assets/works/mc-pysync.png';
 ---
 
 <Layout>
-	<div class="container mx-auto px-4 xl:px-30 py-4">
-		<article>
-			<header class="prose my-6 flex w-full items-center justify-between gap-4 max-w-full mx-0">
-				<h2 class="flex mb-0">主要服務與作品</h2>
-				<a class="flex ml-auto" href="https://status.yuaner.tw">前往完整的狀態頁</a>
-			</header>
-			<div class="bg-base-content/10 mx-1 h-px mb-8"></div>
+  <div class="container mx-auto px-4 xl:px-30 py-4">
+    <article>
+      <header class="prose my-6 flex w-full items-center justify-between gap-4 max-w-full mx-0">
+        <h2 class="flex mb-0">主要服務與作品</h2>
+        <a class="flex ml-auto" href="https://status.yuaner.tw">前往完整的狀態頁</a>
+      </header>
+      <div class="bg-base-content/10 mx-1 h-px mb-8"></div>
 
-			<div class="content">
-				<div class="grid grid-cols-1 md:grid-cols-6 gap-x-4 gap-y-8 mb-12">
+      <div class="content">
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-x-4 gap-y-8 mb-12">
 
-					<MainCard mainImgSrc={yuanai} mainImgAlt="AI"
-						buttons={[
-							{ text: "Open WebUI", class: "btn-primary", href: "https://ai.yuaner.tw" },
-							{ text: "Telegram Bot", href: "https://t.me/yuaner_llm_bot" },
-							{ text: "Firefox Sidebar", href: "https://github.com/chyuaner/firefox-yuan-ai-sidebar/releases/" },
-						]}
-					>
-						<h2 class="card-title">AI LiteLLM GPT</h2>
-						<div class="flex w-full flex-col lg:flex-row">
-							<div class="card grid grow prose text-sm">
-								<p>以 LiteLLM 架設的私人用AI LLM</p>
-								<h4 class="mt-0 mb-0">API Base:    <small>(OpenAI Compatible)</small></h4>
-								<Code code={`https://ai.yuaner.tw/v1`} class="h-[3.8em] p-3 rounded-lg shadow-sm" />
+          <MainCard mainImgSrc={yuanai} mainImgAlt="AI"
+            buttons={[
+              { text: "Open WebUI", class: "btn-primary", href: "https://ai.yuaner.tw" },
+              { text: "Telegram Bot", href: "https://t.me/yuaner_llm_bot" },
+              { text: "Firefox Sidebar", href: "https://github.com/chyuaner/firefox-yuan-ai-sidebar/releases/" },
+            ]}
+          >
+            <h2 class="card-title">AI LiteLLM GPT</h2>
+            <div class="flex w-full flex-col lg:flex-row">
+              <div class="card grid grow prose text-sm">
+                <p>以 LiteLLM 架設的私人用AI LLM</p>
+                <h4 class="mt-0 mb-0">API Base:    <small>(OpenAI Compatible)</small></h4>
+                <Code code={`https://ai.yuaner.tw/v1`} class="h-[3.8em] p-3 rounded-lg shadow-sm" />
 
-								<div class="divider mt-0 mb-0"></div>
+                <div class="divider mt-0 mb-0"></div>
 
-								<h4 class="mt-0 mb-0">可用模型</h4>
-								<ul>
-									<li>OpenAI GPT OSS 120B</li>
-									<li>Llama 3.3 70B</li>
-									<li>Qwen 3 235B Instruct</li>
-									<li>Z.ai GLM 4.6</li>
-								</ul>
-							</div>
-							<div class="divider lg:divider-horizontal"></div>
-							<div class="card grid grow prose text-sm">
-								<h4>Demo 專用帳號</h4>
-								<ul class="">
-									<li>API Key: sk-lAiSr-BHX-Oyf-cJE6p7Nw</li>
-									<li>API Base: https://ai.yuaner.tw/v1</li>
-									<li>
-										Open WebUI登入資訊
-										<ul>
-											<li>Email: demo@yuaner.tw</li>
-											<li>Password: demo</li>
-										</ul>
-									</li>
-									<li>Telegram Bot: <a href="https://t.me/yuaner_llm_demo_bot"</a>@yuaner_llm_demo_bot</a></li>
-								</ul>
-								<p class="mt-0 mb-0">若看不到可用模型，代表Demo可用額度已用完，請明天再來</p>
-								<p class="mt-0 mb-0">Demo帳號每日額度我調很低，僅供測試、展示用</p>
-							</div>
-						</div>
-					</MainCard>
+                <h4 class="mt-0 mb-0">可用模型</h4>
+                <ul>
+                  <li>OpenAI GPT OSS 120B</li>
+                  <li>Llama 3.3 70B</li>
+                  <li>Qwen 3 235B Instruct</li>
+                  <li>Z.ai GLM 4.6</li>
+                </ul>
+              </div>
+              <div class="divider lg:divider-horizontal"></div>
+              <div class="card grid grow prose text-sm">
+                <h4>Demo 專用帳號</h4>
+                <ul class="">
+                  <li>API Key: sk-lAiSr-BHX-Oyf-cJE6p7Nw</li>
+                  <li>API Base: https://ai.yuaner.tw/v1</li>
+                  <li>
+                    Open WebUI登入資訊
+                    <ul>
+                      <li>Email: demo@yuaner.tw</li>
+                      <li>Password: demo</li>
+                    </ul>
+                  </li>
+                  <li>Telegram Bot: <a href="https://t.me/yuaner_llm_demo_bot"</a>@yuaner_llm_demo_bot</a></li>
+                </ul>
+                <p class="mt-0 mb-0">若看不到可用模型，代表Demo可用額度已用完，請明天再來</p>
+                <p class="mt-0 mb-0">Demo帳號每日額度我調很低，僅供測試、展示用</p>
+              </div>
+            </div>
+          </MainCard>
 
-					<MainCard mainImgSrc="https://barian0517.github.io/mcserverweb/Minecraft%20Screenshot%202025.06.26%20-%2001.23.07.95.png" mainImgAlt="Minecraft"
-						buttons={[
-							{ text: "官網", class: "btn-primary", href: "https://mcweb.barian.moe/" },
-							{ text: "客戶端更新器", href: "http://modapi.barian.moe/clientupdate" }
-						]}
-					>
+          <MainCard mainImgSrc="https://barian0517.github.io/mcserverweb/Minecraft%20Screenshot%202025.06.26%20-%2001.23.07.95.png" mainImgAlt="Minecraft"
+            buttons={[
+              { text: "官網", class: "btn-primary", href: "https://mcweb.barian.moe/" },
+              { text: "客戶端更新器", href: "http://modapi.barian.moe/clientupdate" }
+            ]}
+          >
 
-						<h2 class="card-title">幽影櫻minecraft server</h2>
-						<p>融合 魔法、拔刀劍 與槍械 的極致體驗。</p>
-						<Code code={`closingsongserver.barian.moe`} class="p-4 rounded-lg text-sm shadow-sm" />
+            <h2 class="card-title">幽影櫻minecraft server</h2>
+            <p>融合 魔法、拔刀劍 與槍械 的極致體驗。</p>
+            <Code code={`closingsongserver.barian.moe`} class="p-4 rounded-lg text-sm shadow-sm" />
 
-						<fieldset class="fieldset bg-base-200 border-base-300 rounded-box border p-4">
-							<legend class="fieldset-legend">子專案</legend>
-							
-							<div class="flex w-full flex-col lg:flex-row">
-								<MainCard mainImgSrc={mcbapi}>
-									<h5 class="card-title">資訊橋接後端API伺服器</h5>
-									<p>輔助Minecraft伺服器的PHP後端。主要有模組列表、zip打包下載功能提供給我們自己的客戶端模組同步程式、我們的官網使用。額外提供伺服器上線人數查詢。</p>
-								</MainCard>
-								<!-- <div class="divider lg:divider-horizontal"></div>
-								<MainCard mainImgSrc={mcpysync}>
-									<h5 class="card-title">客戶端模組同步程式</h5>
-									<p>我們經營的伺服器為NeoForge模組伺服器，使用者必須安裝對應的模組才能連進我們的伺服器遊玩。考量我們伺服器對於模組需求的更動頻繁，故特別寫了這支小程式來減輕使用者每次都要手動下載檔案的麻煩。</p>
-								</MainCard> -->
-							</div>
-						</fieldset>
-					</MainCard>
-				</div>
-			</div>
-		</article>
-	</div>
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box border p-4">
+              <legend class="fieldset-legend">子專案</legend>
+              
+              <div class="flex w-full flex-col lg:flex-row">
+                <MainCard mainImgSrc={mcbapi}>
+                  <h5 class="card-title">資訊橋接後端API伺服器</h5>
+                  <p>輔助Minecraft伺服器的PHP後端。主要有模組列表、zip打包下載功能提供給我們自己的客戶端模組同步程式、我們的官網使用。額外提供伺服器上線人數查詢。</p>
+                </MainCard>
+                <!-- <div class="divider lg:divider-horizontal"></div>
+                <MainCard mainImgSrc={mcpysync}>
+                  <h5 class="card-title">客戶端模組同步程式</h5>
+                  <p>我們經營的伺服器為NeoForge模組伺服器，使用者必須安裝對應的模組才能連進我們的伺服器遊玩。考量我們伺服器對於模組需求的更動頻繁，故特別寫了這支小程式來減輕使用者每次都要手動下載檔案的麻煩。</p>
+                </MainCard> -->
+              </div>
+            </fieldset>
+          </MainCard>
+        </div>
+      </div>
+    </article>
+  </div>
 </Layout>

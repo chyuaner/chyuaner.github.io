@@ -7,7 +7,7 @@ export default defineConfig({
     vite: {
         plugins: [tailwindcss()],
     },
-		image: {
-			domains: ["astro.build", "raw.githubusercontent.com", "barian0517.github.io"],
-		},
+    image: {
+      domains: ["astro.build", "raw.githubusercontent.com", "barian0517.github.io"],
+    },
 });
