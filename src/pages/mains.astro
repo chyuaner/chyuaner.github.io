@@ -94,6 +94,20 @@ import mcpysync from '../assets/works/mc-pysync.png';
               </div>
             </fieldset>
           </MainCard>
+
+          <MainCard mainImgSrc="https://raw.githubusercontent.com/chyuaner/dotfiles/refs/heads/master/.readme/Screenshot_20250602_011037.png" mainImgAlt="Dotfiles"
+            buttons={[
+              { text: "Github", class: "btn-primary", href: "https://github.com/chyuaner/dotfiles" },
+            ]}
+          >
+            <h2 class="card-title">Yuan dotfile 自用環境設定檔</h2>
+            <p>2025重新以 Manjaro Linux / macOS 為主要的工作環境，重新整理出自己習慣又兼顧美觀的設定檔。</p>
+            <p>主要是chezmoi用來統整這些dotfiles檔案，常用作業系統是Manjaro (Arch Linux) 和 macOS，有針對這兩個作業系統調整過了，也寫好Script盡量可以一兩行指令直接懶人安裝到好。</p>
+
+            <h3 class="mt-[1em]">安裝主dotfiles包</h3>
+            <Code code={`sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply chyuaner`} lang="bash" class="h-[3.8em] p-3 rounded-lg shadow-sm" />
+
+        </MainCard>
         </div>
       </div>
     </article>
