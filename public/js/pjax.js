@@ -37,43 +37,46 @@ function initBarba() {
 		const dock = document.querySelector('#site-title-dock');
 		if (!dock) return;
 
-		const isHome = namespace === '' || namespace === 'index';
-		const isDockVisible = dock.classList.contains('flex');
+    // 取得包在 dock 內的 #site-title 元素
+    const siteTitle = dock.querySelector('#site-title');
+    if (!siteTitle) return;   // 若找不到直接跳過
 
-		if (isHome && isDockVisible) {
-			// ⛔️ 當前為首頁，但 dock 是顯示狀態 → 淡出動畫
-			tl.to(dock, {
-				opacity: 0,
-				duration: 0.4,
-				ease: 'power2.in',
-				onComplete: () => {
-					dock.classList.remove('flex');
-					dock.classList.add('hidden');
-					dock.style.opacity = 0;
-				}
-			});
-		} else if (!isHome && !isDockVisible) {
-			// ⛔️ 當前不是首頁，但 dock 是隱藏狀態 → 淡入動畫
-			tl.fromTo(dock,
-				{ opacity: 0 },
-				{
-					opacity: 1,
-					duration: 0.6,
-					ease: 'power2.out',
-					onStart: () => {
-						dock.classList.add('flex');
-						dock.classList.remove('hidden');
-					},
-					onComplete: () => {
-						dock.style.opacity = 1;
-					}
-				}
-			);
-		} else {
-			// ✅ 狀態沒變，不做任何動畫
-			// console.log('dock 狀態未變，跳過動畫');
-		}
-	}
+		const isHome = namespace === '' || namespace === 'index';
+    const isHidden = siteTitle.classList.contains('md:opacity-0');
+
+    if (isHome && !isHidden) {
+      // ⛔️ 首頁 → 隱藏 site-title（淡出動畫）
+      tl.to(siteTitle, {
+        opacity: 0,
+        duration: 0.4,
+        ease: 'power2.in',
+        onComplete: () => {
+          siteTitle.classList.add('md:opacity-0');
+          siteTitle.style.opacity = 0;
+        }
+      });
+    } else if (!isHome && isHidden) {
+      // ⛔️ 非首頁 → 顯示 site-title（淡入動畫）
+      tl.fromTo(
+        siteTitle,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 0.6,
+          ease: 'power2.out',
+          onStart: () => {
+            siteTitle.classList.remove('md:opacity-0');
+          },
+          onComplete: () => {
+            siteTitle.style.opacity = 1;
+          }
+        }
+      );
+    } else {
+      // ✅ 狀態未變，無需動畫
+      // console.log('site-title 狀態未變，跳過動畫');
+    }
+  }
 
 	barba.init({
 		transitions: [
