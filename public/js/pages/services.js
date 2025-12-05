@@ -9,14 +9,13 @@ export function initPage() {
     upOutput: `<span class="font-bold"><div class="inline-grid *:[grid-area:1/1]"><div class="status status-success animate-ping"></div><div class="status status-success"></div></div> Up</span>`,
     downOutput: `<span class="font-bold"><div class="status status-error animate-bounce"></div> Down</span>`
   });
-  uf.fetch();
 
   tl
   .from('h2', {
     opacity: 0,
     duration: 0.8
   }).call(async () => {
-      uf.render();
+      uf.fetchAndRender();
     })
   // .from('#site-title', {
   //   scale: 0.8,
