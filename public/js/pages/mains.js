@@ -6,8 +6,8 @@ export function initPage() {
   // 1. Start fetching immediately
   const uf = new UptimeFlareStatus({
     apiUrl: "https://status.yuaner.tw/api/data",
-    upOutput: `<span class="font-bold"><div class="inline-grid *:[grid-area:1/1]"><div class="status status-success animate-ping"></div><div class="status status-success"></div></div> Up</span>`,
-    downOutput: `<span class="font-bold"><div class="status status-error animate-bounce"></div> Down</span>`
+    upOutput: `<span class="font-bold"><div class="inline-grid *:[grid-area:1/1]"><div class="status status-success animate-ping"></div><div class="status status-success"></div></div> Server is up</span>`,
+    downOutput: `<span class="font-bold"><div class="status status-error animate-bounce"></div> Server is down</span>`
   });
   uf.fetch();
 

@@ -30,11 +30,18 @@ import echo from '../assets/works/yuan-echo.png';
               { text: "Firefox Sidebar", href: "https://github.com/chyuaner/firefox-yuan-ai-sidebar/releases/" },
             ]}
           >
-            <h2 class="card-title">AI LiteLLM GPT</h2>
+            <div class="flex flex-wrap gap-x-6">
+              <h2 class="card-title">AI LiteLLM GPT</h2>
+              <span class="content-end"><span data-uptimeflare-id="yuan_ai"></span></span>
+            </div>
             <div class="flex w-full flex-col lg:flex-row">
               <div class="card grid grow prose text-sm">
                 <p>以 LiteLLM 架設的私人用AI LLM</p>
-                <h4 class="mt-0 mb-0">API Base:    <small>(OpenAI Compatible)</small></h4>
+                <div class="flex flex-wrap gap-x-3">
+                  <h4 class="mt-0 mb-0">API Base:    <small>(OpenAI Compatible)</small></h4>
+                  <span class="content-end"><span data-uptimeflare-id="yuan_aillm"></span></span>
+                </div>
+                <span data-uptimeflare-id="yuan_aillm"></span>
                 <Code code={`https://ai.yuaner.tw/v1`} class="h-[3.8em] p-3 rounded-lg shadow-sm" />
 
                 <div class="divider mt-0 mb-0"></div>
@@ -119,7 +126,10 @@ import echo from '../assets/works/yuan-echo.png';
               { text: "簡介與開發心得", class: "", href: "https://yuaner.tw/slide-cloudflare-echo-server/" },
             ]}
           >
-            <h2 class="card-title">HTTP Echo Server</h2>
+          <div class="flex flex-wrap gap-x-6">
+              <h2 class="card-title">HTTP Echo Server</h2>
+              <span class="content-end"><span data-uptimeflare-id="yuan_echo"></span></span>
+            </div>
             <p>本專案是提供CDN Edge層級的http回音鸚鵡伺服器（也提供本機端獨立運作的方式）</p><p>就如字面上所說的，你對我發出的Request後，我的伺服器就會把我從你這邊接到的資訊：以什麼網址字串、帶了什麼Post Body、Request Header，一五一實的以ResponseBody方式回應給你。</p><p>同時也可以當作MyIP查詢使用，會顯示在「Host」區塊。 ➤ <a class="link link-primary" href="https://echo.yuaner.tw/assets/text/dict/textpar.html?ref=tablericons&utm_source=tablericons-mainsite&utm_medium=partner&utm_campaign=250k-more-icons&tab=all">Demo</a></p>
 
             <!-- <h3 class="mt-[1em] font-bold">部署方式</h3> -->
