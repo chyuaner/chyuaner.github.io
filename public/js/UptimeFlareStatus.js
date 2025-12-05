@@ -33,7 +33,7 @@ export default class UptimeFlareStatus {
   render() {
     if (!this.data) {
       // 如果沒有資料，將所有區域設為錯誤狀態
-      document.querySelectorAll('span[data-uptimeflare-id]').forEach(span => {
+      document.querySelectorAll('[data-uptimeflare-id]').forEach(span => {
           span.innerHTML = this.errorOutput;
       });
       return;
