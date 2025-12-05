@@ -15,7 +15,7 @@ let services = [
     {
       "name": "部落格主站",
       "subname": "https://blog.yuaner.tw",
-      "status_html": "<img src='https://status-legacy.yuaner.tw/api/badge/4/status'>",
+      "status_html": `<div data-uptimeflare-id="yuan_blog"></div>`,
       "is_new": false,
       "tags": [
         "Blog",
@@ -34,7 +34,7 @@ let services = [
     {
       "name": "部落格舊站",
       "subname": "https://blog-legacy.yuaner.tw",
-      "status_html": "<img src='https://status-legacy.yuaner.tw/api/badge/28/status'>",
+      "status_html": `<div data-uptimeflare-id="yuan_blog_legacy"></div>`,
       "is_new": false,
       "tags": [
         "Blog",
@@ -202,6 +202,7 @@ let services = [
       ]
     }
   ];
+
 ---
 
 <Layout>
@@ -222,4 +223,17 @@ let services = [
       </div>
     </article>
   </div>
+  <script>
+    import UptimeFlareStatus from '../lib/UptimeFlareStatus.js';
+    const uf = new UptimeFlareStatus({
+      apiUrl: "http://localhost:3000/api/data",
+      upOutput: `<div class="inline-grid *:[grid-area:1/1]"><div class="status status-success animate-ping"></div><div class="status status-success"></div></div> Server is up`,
+      downOutput: `<div class="inline-grid *:[grid-area:1/1]"><div class="status status-error animate-ping"></div><div class="status status-error"></div></div> Server is down`
+    });
+
+    // DOM 完全載入後才開始抓取
+    document.addEventListener('DOMContentLoaded', () => {
+      uf.fetchAndRender();
+    });
+  </script>
 </Layout>
