@@ -1,48 +1,69 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import MainCard from '../components/MainCard.astro';
-import { Code } from 'astro:components';
-import ServiceCard from '../components/ServiceCard.astro';
+import MainCard from "../components/MainCard.astro";
+import { Code } from "astro:components";
+import ServiceCard from "../components/ServiceCard.astro";
 
-import yuanai from '../assets/services/yuan-ai.png';
-import mcbapi from '../assets/works/mc-bapi.png';
-import mcpysync from '../assets/works/mc-pysync.png';
-import echo from '../assets/works/yuan-echo.png';
-
+import yuanai from "../assets/services/yuan-ai.png";
+import mcbapi from "../assets/works/mc-bapi.png";
+import mcpysync from "../assets/works/mc-pysync.png";
+import echo from "../assets/works/yuan-echo.png";
 ---
 
 <Layout>
   <div class="container mx-auto px-4 xl:px-30 py-4">
     <article>
-      <header class="prose my-6 md:flex w-full items-center justify-between gap-4 max-w-full mx-0">
+      <header
+        class="prose my-6 md:flex w-full items-center justify-between gap-4 max-w-full mx-0"
+      >
         <h2 class="md:flex mb-0">主要服務與作品</h2>
-        <a class="md:flex ml-auto" href="https://status.yuaner.tw">前往完整的狀態頁</a>
+        <a class="md:flex ml-auto" href="https://status.yuaner.tw"
+          >前往完整的狀態頁</a
+        >
       </header>
       <div class="bg-base-content/10 mx-1 h-px mb-8"></div>
 
       <div class="content">
         <div class="grid grid-cols-1 md:grid-cols-6 gap-x-4 gap-y-8 mb-12">
-
-          <MainCard mainImgSrc={yuanai} mainImgAlt="AI"
+          <MainCard
+            mainImgSrc={yuanai}
+            mainImgAlt="AI"
             buttons={[
-              { text: "Open WebUI", class: "btn-primary", href: "https://ai.yuaner.tw" },
+              {
+                text: "Open WebUI",
+                class: "btn-primary",
+                href: "https://ai.yuaner.tw",
+              },
               { text: "Telegram Bot", href: "https://t.me/yuaner_llm_bot" },
-              { text: "Firefox Sidebar", href: "https://github.com/chyuaner/firefox-yuan-ai-sidebar/releases/" },
+              {
+                text: "Firefox Sidebar",
+                href: "https://github.com/chyuaner/firefox-yuan-ai-sidebar/releases/",
+              },
             ]}
           >
-            <div class="flex flex-wrap gap-x-6">
+            <div class="flex flex-wrap justify-between gap-x-6">
               <h2 class="card-title">AI LiteLLM GPT</h2>
-              <span class="content-end"><span data-uptimeflare-id="yuan_ai"></span></span>
+              <span class="content-end">
+                <div class="table">
+                  <div class="table-row md:inline">
+                    LLM: <span class="table-cell pl-2" data-uptimeflare-id="yuan_aillm"></span>
+                  </div><div class="table-row md:inline md:pl-4">
+                    WebUI: <span class="table-cell pl-2" data-uptimeflare-id="yuan_ai"></span>
+                  </div>
+                </div>
+              </span>
             </div>
             <div class="flex w-full flex-col lg:flex-row">
-              <div class="card grid grow prose text-sm">
+              <div class="card grow prose text-sm">
                 <p>以 LiteLLM 架設的私人用AI LLM</p>
-                <div class="flex flex-wrap gap-x-3">
-                  <h4 class="mt-0 mb-0">API Base:    <small>(OpenAI Compatible)</small></h4>
-                  <span class="content-end"><span data-uptimeflare-id="yuan_aillm"></span></span>
-                </div>
-                <span data-uptimeflare-id="yuan_aillm"></span>
-                <Code code={`https://ai.yuaner.tw/v1`} class="h-[3.8em] p-3 rounded-lg shadow-sm" />
+
+                <h4 class="mt-0 mb-0">
+                  API Base: <small>(OpenAI Compatible)</small>
+                </h4>
+                <Code
+                  code={`https://ai.yuaner.tw/v1`}
+                  class="h-[3.8em] p-3 rounded-lg shadow-sm"
+                />
 
                 <div class="divider mt-0 mb-0"></div>
 
@@ -63,44 +84,86 @@ import echo from '../assets/works/yuan-echo.png';
                   <li>
                     <strong>Open WebUI登入資訊</strong>
                     <ul>
-                      <li><strong>Email:</strong> <!--email_off-->demo@yuaner.tw<!--/email_off--></li>
+                      <li>
+                        <strong>Email:</strong>
+                        <!--email_off-->demo@yuaner.tw<!--/email_off-->
+                      </li>
                       <li><strong>Password:</strong> demo</li>
                     </ul>
                   </li>
-                  <li><strong>Telegram Bot (Demo Ver.):</strong> <a href="https://t.me/yuaner_llm_demo_bot"</a>@yuaner_llm_demo_bot</a></li>
+                  <li>
+                    <strong>Telegram Bot (Demo Ver.):</strong>
+                    <a href="https://t.me/yuaner_llm_demo_bot" < a
+                      >@yuaner_llm_demo_bot</a>
+                  </li>
                 </ul>
-                <p class="mt-0 mb-0"><span class=""><i class="fa-solid fa-circle-info"></i> 若看不到可用模型，代表Demo可用額度已用完，請明天再來</span></p>
-                <p class="mt-0 mb-0"><span class=""><i class="fa-solid fa-circle-info"></i> Demo帳號每日額度我調很低，僅供測試、展示用</span></p>
+                <p class="mt-0 mb-0">
+                  <span class=""
+                    ><i class="fa-solid fa-circle-info"></i> 若看不到可用模型，代表Demo可用額度已用完，請明天再來</span>
+                </p>
+                <p class="mt-0 mb-0">
+                  <span class=""
+                    ><i class="fa-solid fa-circle-info"></i> Demo帳號每日額度我調很低，僅供測試、展示用</span>
+                </p>
               </div>
             </div>
           </MainCard>
 
-          <MainCard mainImgSrc="https://barian0517.github.io/mcserverweb/Minecraft%20Screenshot%202025.06.26%20-%2001.23.07.95.png" mainImgAlt="Minecraft"
+          <MainCard
+            mainImgSrc="https://barian0517.github.io/mcserverweb/Minecraft%20Screenshot%202025.06.26%20-%2001.23.07.95.png"
+            mainImgAlt="Minecraft"
             buttons={[
-              { text: "官網", class: "btn-primary", href: "https://mcweb.barian.moe/" },
-              { text: "客戶端更新器", href: "http://modapi.barian.moe/clientupdate" }
+              {
+                text: "官網",
+                class: "btn-primary",
+                href: "https://mcweb.barian.moe/",
+              },
+              {
+                text: "客戶端更新器",
+                href: "http://modapi.barian.moe/clientupdate",
+              },
             ]}
           >
-
-            <div class="flex flex-wrap gap-x-6">
+            <div class="flex flex-wrap justify-between gap-x-6">
               <h2 class="card-title">幽影櫻minecraft server</h2>
-              <span class="content-end"><span data-uptimeflare-id="barian_mcs2"></span></span>
+              <div class="content-end">
+                <div class="table">
+                  <div class="table-row md:inline">
+                    遊戲服: <span class="table-cell pl-2" data-uptimeflare-id="barian_mcs2"></span>
+                  </div><div class="table-row md:inline md:pl-4">
+                    官網: <span class="table-cell pl-2" data-uptimeflare-id="barian_mcweb"></span>
+                  </div>
+                </div>
+              </div>
             </div>
             <p>融合 魔法、拔刀劍 與槍械 的極致體驗。</p>
-            <Code code={`closingsongserver.barian.moe`} class="p-4 rounded-lg text-sm shadow-sm" />
+            <Code
+              code={`closingsongserver.barian.moe`}
+              class="p-4 rounded-lg text-sm shadow-sm"
+            />
 
-            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box border p-4">
+            <fieldset
+              class="fieldset bg-base-200 border-base-300 rounded-box border p-4"
+            >
               <legend class="fieldset-legend">子專案</legend>
-              
+
               <div class="flex w-full flex-col lg:flex-row">
                 <MainCard isSub mainImgSrc={mcbapi}>
                   <div class="flex flex-wrap gap-x-6">
                     <h5 class="card-title">資訊橋接後端API伺服器</h5>
-                    <span class="content-end"><span data-uptimeflare-id="barian_mcapi"></span></span>
+                    <span class="content-end"
+                      ><span data-uptimeflare-id="barian_mcapi"></span></span
+                    >
                   </div>
-                  <p>輔助Minecraft伺服器的PHP後端。主要有模組列表、zip打包下載功能提供給我們自己的客戶端模組同步程式、我們的官網使用。額外提供伺服器上線人數查詢。</p>
+                  <p>
+                    輔助Minecraft伺服器的PHP後端。主要有模組列表、zip打包下載功能提供給我們自己的客戶端模組同步程式、我們的官網使用。額外提供伺服器上線人數查詢。
+                  </p>
 
-                  <p>➤ <a class="link link-primary" href="https://mc-api.yuaner.tw/">更多介紹</a></p>
+                  <p>
+                    ➤ <a
+                      class="link link-primary"
+                      href="https://mc-api.yuaner.tw/">更多介紹</a>
+                  </p>
                 </MainCard>
                 <!-- <div class="divider lg:divider-horizontal"></div>
                 <MainCard isSub mainImgSrc={mcpysync}>
@@ -111,47 +174,99 @@ import echo from '../assets/works/yuan-echo.png';
             </fieldset>
           </MainCard>
 
-          <MainCard mainImgSrc="https://raw.githubusercontent.com/chyuaner/dotfiles/refs/heads/master/.readme/Screenshot_20250602_011037.png" mainImgAlt="Dotfiles"
+          <MainCard
+            mainImgSrc="https://raw.githubusercontent.com/chyuaner/dotfiles/refs/heads/master/.readme/Screenshot_20250602_011037.png"
+            mainImgAlt="Dotfiles"
             buttons={[
-              { text: "Github", class: "btn-primary", href: "https://github.com/chyuaner/dotfiles" },
+              {
+                text: "Github",
+                class: "btn-primary",
+                href: "https://github.com/chyuaner/dotfiles",
+              },
             ]}
           >
             <h2 class="card-title">Yuan dotfile 自用環境設定檔</h2>
-            <p>2025重新以 Manjaro Linux / macOS 為主要的工作環境，重新整理出自己習慣又兼顧美觀的設定檔。</p>
-            <p>主要是chezmoi用來統整這些dotfiles檔案，常用作業系統是Manjaro (Arch Linux) 和 macOS，有針對這兩個作業系統調整過了，也寫好Script盡量可以一兩行指令直接懶人安裝到好。</p>
+            <p>
+              2025重新以 Manjaro Linux / macOS
+              為主要的工作環境，重新整理出自己習慣又兼顧美觀的設定檔。
+            </p>
+            <p>
+              主要是chezmoi用來統整這些dotfiles檔案，常用作業系統是Manjaro (Arch
+              Linux) 和
+              macOS，有針對這兩個作業系統調整過了，也寫好Script盡量可以一兩行指令直接懶人安裝到好。
+            </p>
 
             <h3 class="mt-[1em]">安裝主dotfiles包</h3>
-            <Code code={`sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply chyuaner`} lang="bash" class="h-[3.8em] p-3 rounded-lg shadow-sm" />
-
+            <Code
+              code={`sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply chyuaner`}
+              lang="bash"
+              class="h-[3.8em] p-3 rounded-lg shadow-sm"
+            />
           </MainCard>
 
-          <MainCard mainImgSrc={echo} mainImgAlt="Echo Server"
+          <MainCard
+            mainImgSrc={echo}
+            mainImgAlt="Echo Server"
             buttons={[
-              { text: "Demo", class: "btn-primary", href: "https://echo.yuaner.tw/assets/text/dict/textpar.html?ref=tablericons&utm_source=tablericons-mainsite&utm_medium=partner&utm_campaign=250k-more-icons&tab=all" },
-              { text: "Github", class: "", href: "https://github.com/chyuaner/cloudflare-echo-server" },
-              { text: "簡介與開發心得", class: "", href: "https://yuaner.tw/slide-cloudflare-echo-server/" },
+              {
+                text: "Demo",
+                class: "btn-primary",
+                href: "https://echo.yuaner.tw/assets/text/dict/textpar.html?ref=tablericons&utm_source=tablericons-mainsite&utm_medium=partner&utm_campaign=250k-more-icons&tab=all",
+              },
+              {
+                text: "Github",
+                class: "",
+                href: "https://github.com/chyuaner/cloudflare-echo-server",
+              },
+              {
+                text: "簡介與開發心得",
+                class: "",
+                href: "https://yuaner.tw/slide-cloudflare-echo-server/",
+              },
             ]}
           >
-          <div class="flex flex-wrap gap-x-6">
+            <div class="flex flex-wrap justify-between gap-x-6">
               <h2 class="card-title">HTTP Echo Server</h2>
-              <span class="content-end"><span data-uptimeflare-id="yuan_echo"></span></span>
+              <span class="content-end"
+                ><span data-uptimeflare-id="yuan_echo"></span></span
+              >
             </div>
-            <p>本專案是提供CDN Edge層級的http回音鸚鵡伺服器（也提供本機端獨立運作的方式）</p><p>就如字面上所說的，你對我發出的Request後，我的伺服器就會把我從你這邊接到的資訊：以什麼網址字串、帶了什麼Post Body、Request Header，一五一實的以ResponseBody方式回應給你。</p><p>同時也可以當作MyIP查詢使用，會顯示在「Host」區塊。 ➤ <a class="link link-primary" href="https://echo.yuaner.tw/assets/text/dict/textpar.html?ref=tablericons&utm_source=tablericons-mainsite&utm_medium=partner&utm_campaign=250k-more-icons&tab=all">Demo</a></p>
+            <p>
+              本專案是提供CDN
+              Edge層級的http回音鸚鵡伺服器（也提供本機端獨立運作的方式）
+            </p><p>
+              就如字面上所說的，你對我發出的Request後，我的伺服器就會把我從你這邊接到的資訊：以什麼網址字串、帶了什麼Post
+              Body、Request Header，一五一實的以ResponseBody方式回應給你。
+            </p><p>
+              同時也可以當作MyIP查詢使用，會顯示在「Host」區塊。 ➤ <a
+                class="link link-primary"
+                href="https://echo.yuaner.tw/assets/text/dict/textpar.html?ref=tablericons&utm_source=tablericons-mainsite&utm_medium=partner&utm_campaign=250k-more-icons&tab=all"
+                >Demo</a>
+            </p>
 
             <!-- <h3 class="mt-[1em] font-bold">部署方式</h3> -->
             <div class="mt-[1em] flex w-full flex-col lg:flex-row">
               <div class="card grid grow">
                 <h4 class="mb-2">Cloudflare Workers</h4>
-                <a href="https://deploy.workers.cloudflare.com/?url=https://github.com/chyuaner/cloudflare-echo-server"><img src="https://deploy.workers.cloudflare.com/button" alt="Deploy to Cloudflare"/></a>
+                <a
+                  href="https://deploy.workers.cloudflare.com/?url=https://github.com/chyuaner/cloudflare-echo-server"
+                  ><img
+                    src="https://deploy.workers.cloudflare.com/button"
+                    alt="Deploy to Cloudflare"
+                  /></a
+                >
               </div>
               <div class="divider lg:divider-horizontal"></div>
               <div class="card grid grow">
                 <h4 class="mb-2">Docker</h4>
-                <Code code={`docker run -p 3000:3000 --pull=always chyuaner/echo-server`} lang="bash" class="h-[3.8em] p-3 rounded-lg shadow-sm" />
+                <Code
+                  code={`docker run -p 3000:3000 --pull=always chyuaner/echo-server`}
+                  lang="bash"
+                  class="h-[3.8em] p-3 rounded-lg shadow-sm"
+                />
               </div>
             </div>
-
-        </MainCard>
+          </MainCard>
         </div>
       </div>
     </article>
