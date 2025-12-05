@@ -1,7 +1,7 @@
 ---
 import CardImage from "./CardImage.astro";
 
-const { is_hide, vertical=false, colSpan: initialColSpan, exClass="", mainImgSrc, mainImgAlt="",
+const { is_hide, vertical=false, colSpan: initialColSpan, isSub=false, exClass="", mainImgSrc, mainImgAlt="",
   buttons = [
   //   { text: "Button 1", href: "#" },
   //   { text: "Button 2", href: "#" },
@@ -20,7 +20,7 @@ if (is_hide) {
 
 ---
 
-<div class=`col-span-${colSpan} ${exClass} card ${vertical ? '' : 'md:card-side'} bg-base-100 shadow-sm dark:shadow-neutral-600 grid grid-cols-12 gap-4`>
+<div class=`${isSub ? '' : 'main-card'} col-span-${colSpan} ${exClass} card ${vertical ? '' : 'md:card-side'} bg-base-100 shadow-sm dark:shadow-neutral-600 grid grid-cols-12 gap-4`>
   {mainImgSrc && (
     <figure class={`col-span-12 ${vertical ? '' : 'md:col-span-4'} flex items-center justify-center`}>
       <CardImage src={mainImgSrc} alt={mainImgAlt} class="w-full h-auto object-cover" />
