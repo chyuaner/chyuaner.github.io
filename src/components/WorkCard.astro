@@ -1,7 +1,7 @@
 ---
 import CardImage from "./CardImage.astro";
 
-const { name, is_hide, is_new, tags, img, description, links } = Astro.props;
+const { name, is_hide, status_html, is_new, tags, img, description, links } = Astro.props;
 if (is_hide) {
   return null;
 }
@@ -26,10 +26,22 @@ if (is_hide) {
       </div>
     </header>
     <p set:html={description}></p>
-    <div class="card-actions justify-end flex-wrap gap-2">
-      {links?.length > 0 && links.map(link => (
-        <a href={link.href} target="_blank" class={`btn ${link.class}`}>{link.text}</a>
-      ))}
+
+    <div class="flex flex-row">
+      <div class="flex-none content-end">
+        <div class="pl-2 pb-2" set:html={status_html}></div>
+      </div>
+      <div class="flex-auto">
+         <div class="card-actions justify-end flex-wrap gap-2">
+           {links?.length > 0 && links.map(link => (
+             <a href={link.href} target="_blank" class={`btn ${link.class}`}>{link.text}</a>
+           ))}
+         </div>
+      </div>
     </div>
+
+
+
+    <!-- <div set:html={status_html}></div> -->
   </div>
 </div>
