@@ -226,7 +226,7 @@ let services = [
   <script>
     import UptimeFlareStatus from '../lib/UptimeFlareStatus.js';
     const uf = new UptimeFlareStatus({
-      apiUrl: "http://localhost:3000/api/data",
+      apiUrl: "https://status.yuaner.tw/api/data",
       upOutput: `<div class="inline-grid *:[grid-area:1/1]"><div class="status status-success animate-ping"></div><div class="status status-success"></div></div> Server is up`,
       downOutput: `<div class="inline-grid *:[grid-area:1/1]"><div class="status status-error animate-ping"></div><div class="status status-error"></div></div> Server is down`
     });
