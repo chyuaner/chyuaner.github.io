@@ -25,7 +25,7 @@ if (is_hide) {
         <div set:html={status_html}></div>
       </div>
     </header>
-    <div class="h-full grid grid-cols-1 items-end">
+    <div class="h-full grid grid-cols-1 items-end content-start">
 
       {description?.trim() && (
         <>
@@ -33,20 +33,19 @@ if (is_hide) {
           <p set:html={description}></p>
         </>
       )}
-  
-      <div class="flex flex-col gap-2 sm:flex-row sm:items-end mt-6">
-        <div class="flex-auto">
-          {tags?.length > 0 && tags.map(tag => (
-            <div class="badge badge-outline mr-2">{tag}</div>
-          ))}
-        </div>
-        <div class="card-actions justify-end flex-wrap gap-2">
-          {links?.length > 0 && links.map(link => (
-            <a href={link.href} target="_blank" class={`btn ${link.class}`}>{link.text}</a>
-          ))}
-        </div>
-      </div>
 
+    </div>
+    <div class="flex flex-col gap-2 sm:flex-row sm:items-end mt-6">
+      <div class="flex-auto">
+        {tags?.length > 0 && tags.map(tag => (
+          <div class="badge badge-outline mr-2">{tag}</div>
+        ))}
+      </div>
+      <div class="card-actions justify-end flex-wrap gap-2">
+        {links?.length > 0 && links.map(link => (
+          <a href={link.href} target="_blank" class={`btn ${link.class}`}>{link.text}</a>
+        ))}
+      </div>
     </div>
   </div>
 </div>
