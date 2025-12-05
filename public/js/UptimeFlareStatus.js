@@ -44,7 +44,7 @@ export default class UptimeFlareStatus {
         const monitorStatus = this.data.monitors[monitorId].up;
         const outputHTML = monitorStatus ? this.upOutput : this.downOutput;
         
-        console.log("UptimeFlare Render:", monitorStatus);
+        // console.log("UptimeFlare Render:", monitorStatus);
         const spanElement = document.querySelector(`[data-uptimeflare-id="${monitorId}"]`);
 
         if (spanElement) {
