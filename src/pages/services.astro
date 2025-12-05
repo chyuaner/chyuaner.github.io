@@ -15,7 +15,7 @@ let services = [
     {
       "name": "部落格主站",
       "subname": "https://blog.yuaner.tw",
-      "status_html": `<span data-uptimeflare-id="yuan_blog" />`,
+      "status_html": `<span data-uptimeflare-id="yuan_blog"></span>`,
       "is_new": false,
       "tags": [
         "Blog",
@@ -34,7 +34,7 @@ let services = [
     {
       "name": "部落格舊站",
       "subname": "https://blog-legacy.yuaner.tw",
-      "status_html": `<span data-uptimeflare-id="yuan_blog_legacy" />`,
+      "status_html": `<span data-uptimeflare-id="yuan_blog_legacy"></span>`,
       "is_new": false,
       "tags": [
         "Blog",
@@ -53,7 +53,7 @@ let services = [
     {
       "name": "服務監測站",
       "subname": "https://status-legacy.yuaner.tw",
-      "status_html": "<img src='https://status-legacy.yuaner.tw/api/badge/37/status'>",
+      "status_html": `<span data-uptimeflare-id="yuan_uptime"></span>`,
       "is_new": false,
       "tags": [
         "mt"
@@ -71,7 +71,7 @@ let services = [
     {
       "name": "AI LLM",
       "subname": "https://ai.yuaner.tw",
-      "status_html": "",
+      "status_html": `<div class="table"><div class="table-row">WebUI: <span class="table-cell w-[4em] text-center" data-uptimeflare-id="yuan_ai"></span></div><div class="table-row">LLM: <span class="table-cell w-[4em] text-center" data-uptimeflare-id="yuan_aillm"></span></div></div>`,
       "is_new": false,
       "tags": [
         "n"
@@ -99,7 +99,7 @@ let services = [
     {
       "name": "Git Server",
       "subname": "https://git.yuaner.tw",
-      "status_html": "<img src='https://status-legacy.yuaner.tw/api/badge/14/status'>",
+      "status_html": `<span data-uptimeflare-id="chiu_git"></span>`,
       "is_new": false,
       "tags": [
         "n"
@@ -117,7 +117,7 @@ let services = [
     {
       "name": "Minecraft",
       "subname": "mcserver.barian.moe:25565",
-      "status_html": "<img src='https://status-legacy.yuaner.tw/api/badge/26/status'>",
+      "status_html": `<span class="font-bold"><div class="status"></div> 整理中</span>`,
       "is_new": false,
       "tags": [
         "l"
@@ -135,7 +135,7 @@ let services = [
     {
       "name": "網站追蹤站",
       "subname": "https://piwik.yuaner.tw",
-      "status_html": "<img src='https://status-legacy.yuaner.tw/api/badge/30/status'>",
+      "status_html": `<span data-uptimeflare-id="yuan_piwik"></span>`,
       "is_new": false,
       "tags": [
         "mt"
@@ -153,7 +153,7 @@ let services = [
     {
       "name": "密碼管理庫",
       "subname": "",
-      "status_html": "<img src='https://status-legacy.yuaner.tw/api/badge/18/status'>",
+      "status_html": `<span data-uptimeflare-id="chiu_bitwarden"></span>`,
       "is_new": false,
       "tags": [
         "l"
@@ -166,7 +166,7 @@ let services = [
     {
       "name": "線上音樂站",
       "subname": "https://music.yuaner.tw",
-      "status_html": "<img src='https://status-legacy.yuaner.tw/api/badge/16/status'>",
+      "status_html": `<span data-uptimeflare-id="yuan_subsonic"></span>`,
       "is_new": false,
       "tags": [
         "n"
@@ -227,8 +227,8 @@ let services = [
     import UptimeFlareStatus from '../lib/UptimeFlareStatus.js';
     const uf = new UptimeFlareStatus({
       apiUrl: "https://status.yuaner.tw/api/data",
-      upOutput: `<div class="inline-grid *:[grid-area:1/1]"><div class="status status-success animate-ping"></div><div class="status status-success"></div></div> Server is up`,
-      downOutput: `<div class="inline-grid *:[grid-area:1/1]"><div class="status status-error animate-ping"></div><div class="status status-error"></div></div> Server is down`
+      upOutput: `<span class="font-bold"><div class="inline-grid *:[grid-area:1/1]"><div class="status status-success animate-ping"></div><div class="status status-success"></div></div> Up</span>`,
+      downOutput: `<span class="font-bold"><div class="status status-error animate-bounce"></div> Down</span>`
     });
 
     // DOM 完全載入後才開始抓取
