@@ -7,7 +7,6 @@ import Footer from '../components/Footer.astro';
 const path = Astro.url.pathname.replace(/\//g, '') || 'index';
 ---
 
-
 <!doctype html>
 <html lang="zh-tw">
   <head>
@@ -16,6 +15,10 @@ const path = Astro.url.pathname.replace(/\//g, '') || 'index';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{MainData.name}</title>
+    <script>
+      import UptimeFlareStatus from "../lib/UptimeFlareStatus.js";
+      window.UptimeFlareStatus = UptimeFlareStatus;
+    </script>
     <script src="/vendor/gsap.js" is:inline></script>
     <script src="/vendor/barba.js" is:inline></script>
     <script type="module" src="/js/pjax.js" defer></script>
