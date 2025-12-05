@@ -44,7 +44,8 @@ export default class UptimeFlareStatus {
         const monitorStatus = this.data.monitors[monitorId].up;
         const outputHTML = monitorStatus ? this.upOutput : this.downOutput;
         
-        const spanElement = document.querySelector(`span[data-uptimeflare-id="${monitorId}"]`);
+        console.log("UptimeFlare Render:", monitorStatus);
+        const spanElement = document.querySelector(`[data-uptimeflare-id="${monitorId}"]`);
 
         if (spanElement) {
           // 使用 innerHTML 來插入您自定義的 HTML 結構
