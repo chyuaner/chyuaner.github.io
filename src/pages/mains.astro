@@ -148,23 +148,26 @@ import echo from "../assets/works/yuan-echo.png";
               <legend class="fieldset-legend">子專案</legend>
 
               <div class="flex w-full flex-col lg:flex-row">
-                <MainCard isSub mainImgSrc={mcbapi}>
-                  <div class="flex flex-wrap gap-x-6">
-                    <h5 class="card-title">資訊橋接後端API伺服器</h5>
-                    <span class="content-end"
-                      ><span data-uptimeflare-id="barian_mcapi"></span></span
-                    >
-                  </div>
-                  <p>
-                    輔助Minecraft伺服器的PHP後端。主要有模組列表、zip打包下載功能提供給我們自己的客戶端模組同步程式、我們的官網使用。額外提供伺服器上線人數查詢。
-                  </p>
 
-                  <p>
-                    ➤ <a
-                      class="link link-primary"
-                      href="https://mc-api.yuaner.tw/">更多介紹</a>
-                  </p>
-                </MainCard>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-base-100 rounded-[10px] shadow-sm p-4">
+                  <figure class="md:col-span-1">
+                    <img
+                      src=`${mcbapi.src}`
+                      class="w-full h-full object-cover"
+                    />
+                  </figure>
+                  <div class="md:col-span-3 flex-1 flex flex-col justify-center">
+                    <h5 class="text-2xl font-bold">資訊橋接後端API伺服器</h5>
+                    <p>輔助Minecraft伺服器的PHP後端。主要有模組列表、zip打包下載功能提供給我們自己的客戶端模組同步程式、我們的官網使用。額外提供伺服器上線人數查詢。</p>
+                    <p>
+                      ➤ <a
+                        class="link link-primary"
+                        href="https://mc-api.yuaner.tw/">更多介紹</a>
+                    </p>
+                  </div>
+                </div>
+
+
                 <!-- <div class="divider lg:divider-horizontal"></div>
                 <MainCard isSub mainImgSrc={mcpysync}>
                   <h5 class="card-title">客戶端模組同步程式</h5>
