@@ -4,6 +4,7 @@ import ServiceCard from '../components/ServiceCard.astro';
 
 import yuanblog from '../assets/services/yuan-blog.png';
 import yuanbloglegacy from '../assets/services/yuan-blog-legacy.png';
+import yuanupflare from '../assets/services/yuan-upflare.png';
 import yuanupkuma from '../assets/services/yuan-upkuma.png';
 import yuanai from '../assets/services/yuan-ai.png';
 import yuangit from '../assets/services/yuan-git.png';
@@ -52,14 +53,14 @@ let services = [
   },
   {
     "name": "服務監測站",
-    "subname": "https://status-legacy.yuaner.tw",
+    "subname": "https://status.yuaner.tw",
     "status_html": `<span data-uptimeflare-id="yuan_uptime"></span>`,
     "is_new": false,
     "tags": [
-      "mt"
+      "cdn"
     ],
-    "img": yuanupkuma,
-    "description": "以 Uptime Kuma 架設的即時網站服務監測站",
+    "img": yuanupflare,
+    "description": "以 UptimeFlare 架設的即時網站服務監測站",
     "links": [
     {
         "text": "前往",
@@ -209,6 +210,27 @@ let services = [
   }
 ];
 
+let disabled_services = [
+  {
+    "name": "服務監測站 (Uptime Kuma版)",
+    "subname": "https://status-legacy.yuaner.tw",
+    "status_html": `<span class="font-bold"><div class="status"></div> 停用</span>`,
+    "is_new": false,
+    "tags": [
+      "mt"
+    ],
+    "img": yuanupkuma,
+    "description": "以 Uptime Kuma 架設的即時網站服務監測站",
+    "links": [
+    {
+        "text": "前往",
+        "class": "btn-primary",
+        "href": "https://status-legacy.yuaner.tw"
+      }
+    ]
+  },
+]
+
 ---
 
 <Layout>
@@ -223,6 +245,21 @@ let services = [
       <div class="content">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map(item => (
+            <ServiceCard {...item} />
+          ))}
+        </div>
+      </div>
+    </article>
+
+    <article>
+      <header class="prose my-6 flex items-end flex-row gap-4">
+        <h2 class="flex mb-0">已停用或不定期的服務</h2>
+      </header>
+      <div class="bg-base-content/10 mx-1 h-px mb-8"></div>
+
+      <div class="content">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {disabled_services.map(item => (
             <ServiceCard {...item} />
           ))}
         </div>
