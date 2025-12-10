@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import MainCard from "../components/MainCard.astro";
 import { Code } from "astro:components";
+import Image from "../components/CardImage.astro";
 import ServiceCard from "../components/ServiceCard.astro";
 
 import yuanai from "../assets/services/yuan-ai.png";
@@ -148,9 +149,10 @@ import echo from "../assets/works/yuan-echo.png";
 
                 <div class="grid grid-cols-2 md:grid-cols-6 gap-4 bg-base-100 rounded-[10px] shadow-sm">
                   <figure class="col-span-6 md:col-span-2">
-                    <img
-                      src=`${mcbapi.src}`
+                    <Image
+                      src={mcbapi}
                       class="w-full h-full object-cover"
+                      alt="Minecraft API Doc"
                     />
                   </figure>
                   <div class="col-span-6 md:col-span-4 flex-1 flex flex-col justify-center">
