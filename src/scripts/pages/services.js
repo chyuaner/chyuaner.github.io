@@ -1,8 +1,10 @@
 import UptimeFlareStatus from '../UptimeFlareStatus.js';
+import gsap from 'gsap';
 
 export function initPage() {
   const tl = gsap.timeline();
 
+  // 1. Start fetching immediately
   const uf = new UptimeFlareStatus({
     apiUrl: "https://status.yuaner.tw/api/data",
     upOutput: `<span class="font-bold"><div class="inline-grid *:[grid-area:1/1]"><div class="status status-success animate-ping"></div><div class="status status-success"></div></div> Up</span>`,
@@ -32,4 +34,10 @@ export function initPage() {
       start: 0 // 從第一個元素開始，不延遲整個動畫
     },
   });
+
+  // // 2. Render after animation completes
+  // tl.call(async () => {
+    // uf.render();
+  //   // await fetchPromise;
+  // });
 }

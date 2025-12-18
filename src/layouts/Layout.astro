@@ -15,9 +15,7 @@ const path = Astro.url.pathname.replace(/\//g, '') || 'index';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{MainData.name}</title>
-    <script src="/vendor/gsap.js" is:inline></script>
-    <script src="/vendor/barba.js" is:inline></script>
-    <script type="module" src="/js/pjax.js" defer></script>
+    <script src="../scripts/swup.js"></script>
   </head>
   <body class="flex flex-col min-h-screen">
     <!-- 背景層 -->
@@ -25,8 +23,8 @@ const path = Astro.url.pathname.replace(/\//g, '') || 'index';
     <nav>
       <Navbar />
     </nav>
-    <main class="flex flex-1" data-barba="wrapper">
-      <div class="flex flex-1" data-barba="container" data-barba-namespace={path}>
+    <main class="flex flex-1" id="swup">
+      <div class="flex flex-1 transition-fade">
         <slot />
       </div>
     </main>

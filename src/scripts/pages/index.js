@@ -1,3 +1,5 @@
+import gsap from 'gsap';
+
 export function initPage() {
   const tl = gsap.timeline();
 

@@ -1,4 +1,5 @@
 import UptimeFlareStatus from '../UptimeFlareStatus.js';
+import gsap from 'gsap';
 
 export function initPage() {
   const tl = gsap.timeline();
@@ -6,8 +7,8 @@ export function initPage() {
   // 1. Start fetching immediately
   const uf = new UptimeFlareStatus({
     apiUrl: "https://status.yuaner.tw/api/data",
-    upOutput: `<span class="font-bold"><div class="inline-grid *:[grid-area:1/1]"><div class="status status-success animate-ping"></div><div class="status status-success"></div></div> Up</span>`,
-    downOutput: `<span class="font-bold"><div class="status status-error animate-bounce"></div> Down</span>`
+    upOutput: `<span class="font-bold"><div class="inline-grid *:[grid-area:1/1]"><div class="status status-success animate-ping"></div><div class="status status-success"></div></div> Server is up</span>`,
+    downOutput: `<span class="font-bold"><div class="status status-error animate-bounce"></div> Server is down</span>`
   });
 
   tl
@@ -17,14 +18,9 @@ export function initPage() {
   }).call(async () => {
       uf.fetchAndRender();
     })
-  // .from('#site-title', {
-  //   scale: 0.8,
-  //   opacity: 0,
-  //   duration: 0.5
-  // })
-  .from('.card', {
+  .from('.main-card', {
     // scale: 0.8,
-    y: -50,
+    x: 100,
     opacity: 0,
     duration: 0.5,
     stagger: {
