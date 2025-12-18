@@ -20,12 +20,20 @@ const transition = {
     ]);
   },
   enter: (data) => {
-    gsap.from(data.containers, {
+    // 這裡使用 fromTo，確保從 opacity: 0 (由 CSS 控制的初始狀態) 開始
+    // 並且明確設定 visibility: visible 避免 CSS 造成的隱藏
+    gsap.fromTo(data.containers, {
       opacity: 0,
       y: 20,
+      visibility: 'hidden'
+    }, {
+      opacity: 1,
+      y: 0,
+      visibility: 'visible',
       duration: 0.4,
       ease: 'power2.out'
     });
+    
     return gsap.fromTo('footer', {
       y: 0,
       opacity: 0.5
@@ -147,6 +155,19 @@ function initSwup() {
   // ========== Hooks ==========
   
   // 1. Initial Load
+  // 由於 CSS 預設隱藏 (.js #swup)，這裡需要執行動畫顯示
+  gsap.fromTo('#swup', {
+    opacity: 0,
+    y: 20,
+    visibility: 'hidden'
+  }, {
+    opacity: 1,
+    y: 0,
+    visibility: 'visible',
+    duration: 0.4,
+    ease: 'power2.out'
+  });
+
   runPageScript(window.location.pathname);
   updateDockByNamespace(window.location.pathname);
 

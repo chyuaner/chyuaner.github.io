@@ -15,6 +15,9 @@ const path = Astro.url.pathname.replace(/\//g, '') || 'index';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{MainData.name}</title>
+    <script is:inline>
+      document.documentElement.classList.add('js');
+    </script>
     <script src="../scripts/swup.js"></script>
   </head>
   <body class="flex flex-col min-h-screen">
@@ -53,6 +56,12 @@ const path = Astro.url.pathname.replace(/\//g, '') || 'index';
   </body>
 </html>
 
-<style>
-
+<style is:global>
+  /* FOUC prevention: 
+     當 JS 啟用時，初始隱藏 #swup，交由 swup.js 負責 GSAP 進場。
+     若 JS 禁用，此 class 不存在，內容直接顯示 (Progressive Enhancement)。 */
+  html.js #swup {
+    opacity: 0;
+    visibility: hidden;
+  }
 </style>
