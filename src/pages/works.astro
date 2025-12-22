@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import WorkCard from '../components/WorkCard.astro';
 
+import fimg from '../assets/works/yuan-fimg.png';
 import echo from '../assets/works/yuan-echo.png';
 import mcpysync from '../assets/works/mc-pysync.png';
 import mcbapi from '../assets/works/mc-bapi.png';
@@ -13,6 +14,28 @@ import cxdevent from '../assets/works/cxd-event.png';
 import cxdscore from '../assets/works/cxd-score.png';
 
 let works = [
+    {
+      "name": "Fimg 佔位圖URL產生器",
+      "is_new": false,
+      "status_html": `<span data-uptimeflare-id="yuan_fimg"></span>`,
+      "tags": [
+        "CDN"
+      ],
+      "img": fimg,
+      "description": "<p>本專案以Fake images please?為基礎，重新以能在Cloudflare Worker、Vercel原生運行為前提重新撰寫，並部署成單一入口雙伺服器架構（較重負擔的事情交給Vercel）。</p><p>並在不破壞Fake images please原有網址結構設計的情況下，加入分組式的網址結構，大幅加入功能擴充的彈性。</p>",
+      "links": [
+        {
+          "text": "Demo",
+          "class": "btn-primary",
+          "href": "https://fimg.yuaner.tw"
+        },
+        {
+          "text": "Github",
+          "class": "",
+          "href": "https://github.com/chyuaner/cloudflare-fimg"
+        }
+      ]
+    },
     {
       "name": "HTTP Echo Server",
       "is_new": false,
