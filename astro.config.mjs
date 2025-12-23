@@ -10,4 +10,9 @@ export default defineConfig({
     image: {
       domains: ["astro.build", "raw.githubusercontent.com", "barian0517.github.io"],
     },
+
+    server: {
+      port: 4321,
+      host: true,
+    },
 });
