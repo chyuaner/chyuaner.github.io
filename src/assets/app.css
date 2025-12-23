@@ -5,6 +5,17 @@
 }
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 
+@font-face {
+  font-family: "huninn";
+  src: url("/fonts/jf-openhuninn-2.1.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@theme {
+  --font-sans: 'huninn', 'sans-serif';
+}
+
 .navbar .menu-active {
   @apply bg-primary text-primary-content font-semibold pointer-events-none;
 }
