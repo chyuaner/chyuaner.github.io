@@ -20,7 +20,7 @@ if (is_hide) {
 
 ---
 
-<div class=`${isSub ? '' : 'main-card'} col-span-${colSpan} ${exClass} overflow-clip rounded-[10px] bg-base-100 shadow-sm dark:shadow-neutral-600 grid grid-cols-12 gap-4`>
+<div class=`${isSub ? '' : 'main-card'} relative col-span-${colSpan} ${exClass} overflow-clip rounded-[10px] bg-base-100 shadow-sm dark:shadow-neutral-600 grid grid-cols-12 gap-4`>
   {mainImgSrc && (
     <figure class={`col-span-12 ${vertical ? '' : 'md:col-span-4'}`}>
       <CardImage src={mainImgSrc} alt={mainImgAlt} class="md:absolute md:h-full md:w-auto mask-gradient" />

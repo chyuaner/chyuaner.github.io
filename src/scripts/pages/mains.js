@@ -28,6 +28,7 @@ export function initPage() {
       amount: 0,
       start: 0 // 從第一個元素開始，不延遲整個動畫
     },
+    clearProps: 'all'
   });
 
   // // 2. Render after animation completes
