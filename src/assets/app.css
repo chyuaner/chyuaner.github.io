@@ -23,6 +23,12 @@
 /* html {
   background: #eceff4;
 } */
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 .bg-fancy {
   background: #eceff4;
   background: linear-gradient(135deg,  #f6f8f9 0%, #e5ebee 50%, #d7dee3 56%, #f5f7f9 100%);
