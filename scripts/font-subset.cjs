@@ -4,6 +4,8 @@ const path = require('path');
 const glob = require('glob');
 const subsetFont = require('subset-font');
 
+const crypto = require('crypto');
+
 const DIST_DIR = 'dist';
 const FONTS_DIR = 'public/fonts';
 const OUTPUT_FONTS_DIR = 'dist/fonts';
@@ -12,17 +14,14 @@ const OUTPUT_FONTS_DIR = 'dist/fonts';
 const FONTS = [
     {
         src: 'jf-openhuninn-2.1.ttf',
-        dest: 'jf-openhuninn-2.1.woff2'
+        baseDest: 'jf-openhuninn-2.1'
     }
-    // Add more fonts here in the future
-    // { src: 'another-font.ttf', dest: 'another-font.woff2' }
 ];
 
 async function scanHtmlForCharacters() {
     const htmlFiles = glob.sync(`${DIST_DIR}/**/*.html`);
     const characters = new Set();
 
-    // Default characters to include (e.g. English, Punctuation, Numbers)
     const defaults = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{};':\",./<>?`~";
     for (const char of defaults) {
         characters.add(char);
@@ -47,7 +46,6 @@ async function scanHtmlForCharacters() {
 async function createSubsets(text) {
     console.log(`Unique characters found: ${text.length}`);
     
-    // Ensure output directory exists before processing any fonts
     await fs.mkdir(OUTPUT_FONTS_DIR, { recursive: true });
 
     for (const fontConfig of FONTS) {
@@ -55,7 +53,6 @@ async function createSubsets(text) {
             console.log(`Processing font: ${fontConfig.src}`);
             const fontPath = path.join(FONTS_DIR, fontConfig.src);
             
-            // Check if source font exists
             try {
                 await fs.access(fontPath);
             } catch (e) {
@@ -63,15 +60,16 @@ async function createSubsets(text) {
                 continue;
             }
 
-            // Read original font
             const fontbuffer = await fs.readFile(fontPath);
             
-            // Create subset
             const subsetBuffer = await subsetFont(fontbuffer, text, {
                 targetFormat: 'woff2',
             });
 
-            // Write subset font
+            // Calculate hash from subset buffer
+            const hash = crypto.createHash('md5').update(subsetBuffer).digest('hex').slice(0, 8);
+            fontConfig.dest = `${fontConfig.baseDest}.${hash}.woff2`;
+
             const outputPath = path.join(OUTPUT_FONTS_DIR, fontConfig.dest);
             await fs.writeFile(outputPath, subsetBuffer);
             
@@ -93,18 +91,18 @@ async function updateCssReferences() {
         let fileChanged = false;
 
         for (const fontConfig of FONTS) {
+            if (!fontConfig.dest) continue;
+
             const srcName = fontConfig.src;
             const destName = fontConfig.dest;
 
-            // Simple check to avoid running regex if not needed
             if (content.includes(srcName)) {
-                 // Regex to match: url(possible_quote/fonts/jf-openhuninn-2.1.ttfpossible_quote)(optional_space)format("truetype")
-                 const regex = new RegExp(`url\\((['"]?)/fonts/${srcName}\\1\\)\\s*format\\("truetype"\\)`, 'g');
+                 const regex = new RegExp(`url\\((['"]?)/fonts/${srcName.replace(/\./g, '\\.')}\\1\\)\\s*format\\("truetype"\\)`, 'g');
                  
                  if (regex.test(content)) {
                      const newContent = content.replace(regex, `url("/fonts/${destName}") format("woff2")`);
                      if (content !== newContent) {
-                        content = newContent; // Update variable for next iteration/save
+                        content = newContent;
                         fileChanged = true;
                         console.log(`Updated reference: ${srcName} -> ${destName}`);
                      }
