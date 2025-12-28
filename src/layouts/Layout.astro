@@ -20,7 +20,7 @@ const path = Astro.url.pathname.replace(/\//g, '') || 'index';
     </script>
     <script src="../scripts/swup.js"></script>
   </head>
-  <body class="flex flex-col min-h-screen overflow-x-hidden">
+  <body class="flex flex-col min-h-screen supports-[height:100dvh]:min-h-dvh overflow-x-hidden">
     <!-- 背景層 -->
   <div id="bg-fancy" class="fixed inset-0 -z-10 bg-fancy"></div>
     <nav>
