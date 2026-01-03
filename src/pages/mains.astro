@@ -27,7 +27,7 @@ import fimg from "../assets/works/yuan-fimg.png";
 
       <div class="content">
         <div class="grid grid-cols-1 md:grid-cols-6 gap-x-4 gap-y-8 mb-12">
-          
+
           <!-- AI LiteLLM GPT -->
           <MainCard
             mainImgSrc={yuanai}
@@ -186,34 +186,44 @@ import fimg from "../assets/works/yuan-fimg.png";
             </fieldset>
           </MainCard>
 
-          <!-- Yuan dotfile 自用環境設定檔 -->
+          <!-- Fimg 佔位圖URL產生器 -->
           <MainCard
-            mainImgSrc="https://raw.githubusercontent.com/chyuaner/dotfiles/refs/heads/master/.readme/Screenshot_20250602_011037.png"
-            mainImgAlt="Dotfiles"
+            mainImgSrc={fimg}
+            mainImgAlt="Fimg 佔位圖URL產生器"
             buttons={[
               {
-                text: "Github",
-                class: "btn-primary",
-                href: "https://github.com/chyuaner/dotfiles",
+                "text": "Demo",
+                "class": "btn-primary",
+                "href": "https://fimg.yuaner.tw"
               },
+              {
+                "text": "Github",
+                "class": "",
+                "href": "https://github.com/chyuaner/node-fimg-generator"
+              }
             ]}
           >
-            <h2 class="card-title">Yuan dotfile 自用環境設定檔</h2>
-            <p>
-              2025重新以 Manjaro Linux / macOS
-              為主要的工作環境，重新整理出自己習慣又兼顧美觀的設定檔。
-            </p>
-            <p>
-              主要是chezmoi用來統整這些dotfiles檔案，常用作業系統是Manjaro (Arch
-              Linux) 和
-              macOS，有針對這兩個作業系統調整過了，也寫好Script盡量可以一兩行指令直接懶人安裝到好。
-            </p>
+            <div class="flex flex-wrap justify-between gap-x-6">
+              <h2 class="card-title">Fimg 預留圖產生站</h2>
+              <span class="content-end"
+                ><span data-uptimeflare-id="yuan_fimg"></span></span
+              >
+            </div>
+            <p>本站提供URL直連網址，可讓你在設計網站時，在已知尺寸的情況下，可快速插入預留圖可以幫助您排版。同時也新增邊緣背景設計的功能，方便用於製作螢幕截圖示意圖、簡報圖美化用途。</p>
+            <p>可前往 ➤ <a href="https://fimg.yuaner.tw" class="link link-primary" target="_blank">https://fimg.yuaner.tw</a></p>
 
-            <h3 class="mt-[1em]">安裝主dotfiles包</h3>
+            <h3 class="mt-[1em]">或是使用以下的範例：</h3>
             <Code
-              code={`sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply chyuaner`}
-              lang="bash"
-              class="h-[3.8em] p-3 rounded-lg shadow-sm"
+              code={`<h3>一般預留圖</h3>
+<img src="https://fimg.yuaner.tw/300x200.png">
+
+<h3>自訂文案、背景色、文字顏色的預留圖</h3>
+<img src="https://fimg.yuaner.tw/400x200/ff0000/FFF/?text=🖼️預留圖😉&filetype=png">
+
+<h3>帶有邊緣背景的：陰影、圓角與背景圖案 的預留圖</h3>
+<img src="https://fimg.yuaner.tw/bg/5/10/4/tpl(drool-l)/ph/300x200">`}
+              lang="html"
+              class="h-[13.8em] p-3 rounded-lg shadow-sm"
             />
           </MainCard>
 
@@ -282,46 +292,37 @@ import fimg from "../assets/works/yuan-fimg.png";
             </div>
           </MainCard>
 
-          <!-- Fimg 佔位圖URL產生器 -->
+          <!-- Yuan dotfile 自用環境設定檔 -->
           <MainCard
-            mainImgSrc={fimg}
-            mainImgAlt="Fimg 佔位圖URL產生器"
+            mainImgSrc="https://raw.githubusercontent.com/chyuaner/dotfiles/refs/heads/master/.readme/Screenshot_20250602_011037.png"
+            mainImgAlt="Dotfiles"
             buttons={[
               {
-                "text": "Demo",
-                "class": "btn-primary",
-                "href": "https://fimg.yuaner.tw"
+                text: "Github",
+                class: "btn-primary",
+                href: "https://github.com/chyuaner/dotfiles",
               },
-              {
-                "text": "Github",
-                "class": "",
-                "href": "https://github.com/chyuaner/node-fimg-generator"
-              }
             ]}
           >
-            <div class="flex flex-wrap justify-between gap-x-6">
-              <h2 class="card-title">Fimg 預留圖產生站</h2>
-              <span class="content-end"
-                ><span data-uptimeflare-id="yuan_fimg"></span></span
-              >
-            </div>
-            <p>本站提供URL直連網址，可讓你在設計網站時，在已知尺寸的情況下，可快速插入預留圖可以幫助您排版。同時也新增邊緣背景設計的功能，方便用於製作螢幕截圖示意圖、簡報圖美化用途。</p>
-            <p>可前往 ➤ <a href="https://fimg.yuaner.tw" class="link link-primary" target="_blank">https://fimg.yuaner.tw</a></p>
+            <h2 class="card-title">Yuan dotfile 自用環境設定檔</h2>
+            <p>
+              2025重新以 Manjaro Linux / macOS
+              為主要的工作環境，重新整理出自己習慣又兼顧美觀的設定檔。
+            </p>
+            <p>
+              主要是chezmoi用來統整這些dotfiles檔案，常用作業系統是Manjaro (Arch
+              Linux) 和
+              macOS，有針對這兩個作業系統調整過了，也寫好Script盡量可以一兩行指令直接懶人安裝到好。
+            </p>
 
-            <h3 class="mt-[1em]">或是使用以下的範例：</h3>
+            <h3 class="mt-[1em]">安裝主dotfiles包</h3>
             <Code
-              code={`<h3>一般預留圖</h3>
-<img src="https://fimg.yuaner.tw/300x200.png">
-
-<h3>自訂文案、背景色、文字顏色的預留圖</h3>
-<img src="https://fimg.yuaner.tw/400x200/ff0000/FFF/?text=🖼️預留圖😉&filetype=png">
-
-<h3>帶有邊緣背景的：陰影、圓角與背景圖案 的預留圖</h3>
-<img src="https://fimg.yuaner.tw/bg/5/10/4/tpl(drool-l)/ph/300x200">`}
-              lang="html"
-              class="h-[13.8em] p-3 rounded-lg shadow-sm"
+              code={`sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply chyuaner`}
+              lang="bash"
+              class="h-[3.8em] p-3 rounded-lg shadow-sm"
             />
           </MainCard>
+
         </div>
       </div>
     </article>
