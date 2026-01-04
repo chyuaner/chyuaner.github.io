@@ -9,6 +9,7 @@ import yuanai from "../assets/services/yuan-ai.png";
 import mcbapi from "../assets/works/mc-bapi.png";
 import mcpysync from "../assets/works/mc-pysync.png";
 import echo from "../assets/works/yuan-echo.png";
+import myip from '../assets/works/yuan-myip.png';
 import fimg from "../assets/works/yuan-fimg.png";
 ---
 
@@ -290,6 +291,61 @@ import fimg from "../assets/works/yuan-fimg.png";
                 />
               </div>
             </div>
+          </MainCard>
+
+          <!-- MyIp - 查看你的公網IP -->
+          <MainCard
+            mainImgSrc={myip}
+            mainImgAlt="MyIP"
+            buttons={[
+              {
+                "text": "Demo",
+                "class": "btn-primary",
+                "href": "https://myip.yuaner.tw/"
+              },
+              {
+                "text": "Github",
+                "class": "",
+                "href": "https://github.com/chyuaner/cloudflare-myip"
+              }
+            ]}
+          >
+            <div class="flex flex-wrap justify-between gap-x-6">
+              <h2 class="card-title">MyIp - 查看你的公網IP</h2>
+              <span class="content-end"
+                ><span data-uptimeflare-id="yuan_myip"></span></span
+              >
+            </div>
+            <p>
+              本站提供你的IP檢測服務，包括 ISP、ASN、國家、城市、大洲、時區等詳細數據，並支援 IPv4 與 IPv6 。
+            </p><p>
+              除了提供網頁界面以外，也提供純文字、JSON輸出，可用Postman當做API服務使用。
+            </p>
+
+            <div class="flex w-full flex-col xl:flex-row">
+              <div class="card grid grow prose prose-sm">
+                <ul>
+                  <li>本站網址：<a href="https://myip.yuaner.tw" class="link link-primary" target="_blank">https://myip.yuaner.tw</a></li>
+                  <li>查詢IP與資訊：<a href="https://myip.yuaner.tw/ip" class="link link-primary" target="_blank">https://myip.yuaner.tw/ip</a></li>
+                  <li>現在當地時間：<a href="https://myip.yuaner.tw/now" class="link link-primary" target="_blank">https://myip.yuaner.tw/now</a></li>
+                  <li>現在UTC時間：<a href="https://myip.yuaner.tw/utc" class="link link-primary" target="_blank">https://myip.yuaner.tw/utc</a></li>
+                </ul>
+              </div>
+              <div class="divider xl:divider-horizontal"></div>
+              <div class="card grid grow">
+                <!-- <h3>aaa</h3> -->
+                <Code
+                  code={`curl -s https://myip.yuaner.tw | jq
+curl https://myip.yuaner.tw/ip
+curl https://myip.yuaner.tw/country
+curl https://myip.yuaner.tw/now
+curl https://myip.yuaner.tw/utc`}
+                  lang="bash"
+                  class="p-3 rounded-lg shadow-sm"
+                />
+              </div>
+            </div>
+
           </MainCard>
 
           <!-- Yuan dotfile 自用環境設定檔 -->

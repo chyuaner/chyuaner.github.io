@@ -4,6 +4,7 @@ import WorkCard from '../components/WorkCard.astro';
 
 import fimg from '../assets/works/yuan-fimg.png';
 import echo from '../assets/works/yuan-echo.png';
+import myip from '../assets/works/yuan-myip.png';
 import mcpysync from '../assets/works/mc-pysync.png';
 import mcbapi from '../assets/works/mc-bapi.png';
 import jgbsmart from '../assets/works/jgbsmart.png';
@@ -60,6 +61,28 @@ let works = [
           "text": "簡介與開發心得",
           "class": "",
           "href": "https://yuaner.tw/slide-cloudflare-echo-server/"
+        }
+      ]
+    },
+    {
+      "name": "MyIp - 查看你的公網IP",
+      "is_new": false,
+      "status_html": `<span data-uptimeflare-id="yuan_myip"></span>`,
+      "tags": [
+        "CDN"
+      ],
+      "img": myip,
+      "description": "<p>本專案是將原有另一個專案：HTTP Echo Server的副功能獨立出來以後，重寫前端界面而成立的分支專案。並繼承原有的特性，提供CDN層級的高效能服務。</p><p>提供你的IP檢測服務，包括 ISP、ASN、國家、城市、大洲、時區等詳細數據，並支援 IPv4 與 IPv6 。</p><p>除了提供網頁界面以外，也提供純文字、JSON輸出，可用Postman當做API服務使用。</p>",
+      "links": [
+        {
+          "text": "Demo",
+          "class": "btn-primary",
+          "href": "https://myip.yuaner.tw/"
+        },
+        {
+          "text": "Github",
+          "class": "",
+          "href": "https://github.com/chyuaner/cloudflare-myip"
         }
       ]
     },
