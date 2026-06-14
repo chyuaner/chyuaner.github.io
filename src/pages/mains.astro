@@ -59,7 +59,7 @@ import fimg from "../assets/works/yuan-fimg.png";
               </span>
             </div>
             <div class="flex w-full flex-col lg:flex-row">
-              <div class="card flex-1 prose text-sm max-w-none">
+              <div class="card grow prose text-sm">
                 <p>以 LiteLLM 架設的私人用AI LLM</p>
 
                 <h4 class="mt-0 mb-0">
@@ -82,7 +82,7 @@ import fimg from "../assets/works/yuan-fimg.png";
                 </ol>
               </div>
               <div class="divider lg:divider-horizontal"></div>
-              <div class="card grid flex-1 prose text-sm max-w-none">
+              <div class="card grid grow prose text-sm">
                 <h4>Demo 專用帳號</h4>
                 <ul class="">
                   <li><strong>API Key:</strong> sk-lAiSr-BHX-Oyf-cJE6p7Nw</li>
@@ -270,7 +270,7 @@ import fimg from "../assets/works/yuan-fimg.png";
 
             <!-- <h3 class="mt-[1em] font-bold">部署方式</h3> -->
             <div class="mt-[1em] flex w-full flex-col lg:flex-row">
-              <div class="card grid flex-1">
+              <div class="card grid grow">
                 <h4 class="mb-2">Cloudflare Workers</h4>
                 <a
                   href="https://deploy.workers.cloudflare.com/?url=https://github.com/chyuaner/cloudflare-echo-server"
@@ -281,7 +281,7 @@ import fimg from "../assets/works/yuan-fimg.png";
                 >
               </div>
               <div class="divider lg:divider-horizontal"></div>
-              <div class="card grid flex-1">
+              <div class="card grid grow">
                 <h4 class="mb-2">Docker</h4>
                 <Code
                   code={`docker run -p 3000:3000 --pull=always chyuaner/echo-server`}
