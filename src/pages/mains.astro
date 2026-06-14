@@ -59,7 +59,7 @@ import fimg from "../assets/works/yuan-fimg.png";
               </span>
             </div>
             <div class="flex w-full flex-col lg:flex-row">
-              <div class="card grow prose text-sm">
+              <div class="card flex-1 prose text-sm max-w-none">
                 <p>以 LiteLLM 架設的私人用AI LLM</p>
 
                 <h4 class="mt-0 mb-0">
@@ -82,7 +82,7 @@ import fimg from "../assets/works/yuan-fimg.png";
                 </ol>
               </div>
               <div class="divider lg:divider-horizontal"></div>
-              <div class="card grid grow prose text-sm">
+              <div class="card grid flex-1 prose text-sm max-w-none">
                 <h4>Demo 專用帳號</h4>
                 <ul class="">
                   <li><strong>API Key:</strong> sk-lAiSr-BHX-Oyf-cJE6p7Nw</li>
@@ -99,8 +99,7 @@ import fimg from "../assets/works/yuan-fimg.png";
                   </li>
                   <li>
                     <strong>Telegram Bot (Demo Ver.):</strong>
-                    <a href="https://t.me/yuaner_llm_demo_bot" < a
-                      >@yuaner_llm_demo_bot</a>
+                    <a href="https://t.me/yuaner_llm_demo_bot">@yuaner_llm_demo_bot</a>
                   </li>
                 </ul>
                 <p class="mt-0 mb-0">
@@ -271,7 +270,7 @@ import fimg from "../assets/works/yuan-fimg.png";
 
             <!-- <h3 class="mt-[1em] font-bold">部署方式</h3> -->
             <div class="mt-[1em] flex w-full flex-col lg:flex-row">
-              <div class="card grid grow">
+              <div class="card grid flex-1">
                 <h4 class="mb-2">Cloudflare Workers</h4>
                 <a
                   href="https://deploy.workers.cloudflare.com/?url=https://github.com/chyuaner/cloudflare-echo-server"
@@ -282,7 +281,7 @@ import fimg from "../assets/works/yuan-fimg.png";
                 >
               </div>
               <div class="divider lg:divider-horizontal"></div>
-              <div class="card grid grow">
+              <div class="card grid flex-1">
                 <h4 class="mb-2">Docker</h4>
                 <Code
                   code={`docker run -p 3000:3000 --pull=always chyuaner/echo-server`}
@@ -323,20 +322,21 @@ import fimg from "../assets/works/yuan-fimg.png";
             </p>
 
             <div class="flex w-full flex-col xl:flex-row">
-              <div class="card grid grow prose prose-sm">
+              <div class="card grid flex-3 prose prose-sm max-w-none">
                 <ul>
                   <li>本站網址：<a href="https://myip.yuaner.tw" class="link link-primary" target="_blank">https://myip.yuaner.tw</a></li>
                   <li>查詢IP與資訊：<a href="https://myip.yuaner.tw/ip" class="link link-primary" target="_blank">https://myip.yuaner.tw/ip</a></li>
+                  <li>查詢IP(png)：<a href="https://myip.yuaner.tw/ip.png" class="link link-primary" target="_blank">https://myip.yuaner.tw/ip.png</a></li>
                   <li>現在當地時間：<a href="https://myip.yuaner.tw/now" class="link link-primary" target="_blank">https://myip.yuaner.tw/now</a></li>
                   <li>現在UTC時間：<a href="https://myip.yuaner.tw/utc" class="link link-primary" target="_blank">https://myip.yuaner.tw/utc</a></li>
                 </ul>
               </div>
               <div class="divider xl:divider-horizontal"></div>
-              <div class="card grid grow">
+              <div class="card grid flex-4">
                 <!-- <h3>aaa</h3> -->
                 <Code
                   code={`curl -s https://myip.yuaner.tw | jq
-curl https://myip.yuaner.tw/ip
+curl -s "https://myip.yuaner.tw/ip.png" | magick - SIXEL:-
 curl https://myip.yuaner.tw/country
 curl https://myip.yuaner.tw/now
 curl https://myip.yuaner.tw/utc`}
