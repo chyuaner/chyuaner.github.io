@@ -112,8 +112,82 @@ import fimg from "../assets/works/yuan-fimg.png";
             </div>
           </MainCard>
 
-          <!-- 幽影櫻minecraft server -->
+          <!-- MC8 minecraft server -->
           <MainCard
+            mainImgSrc="https://mc8.yuaner.tw/app/2026-08-27_20.32.00.png"
+            mainImgAlt="Minecraft"
+            buttons={[
+              {
+                text: "官網",
+                class: "btn-primary",
+                href: "https://mc8.yuaner.tw/",
+              },
+              {
+                text: "檔案下載",
+                href: "https://mc8.yuaner.tw/dl/",
+              },
+            ]}
+          >
+            <div class="flex flex-wrap justify-between gap-x-6">
+              <h2 class="card-title">Yuan MC8 重度機械症 鐵路世界</h2>
+              <div class="content-end">
+                <div class="table">
+                  <div class="table-row md:inline">
+                    遊戲服: <span class="table-cell pl-2" data-uptimeflare-id="yuan_mc8_v4"></span>
+                  </div><div class="table-row md:inline md:pl-4">
+                    官網: <span class="table-cell pl-2" data-uptimeflare-id="yuan_mc8_web"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p>由鐵道迷創立的機械動力鐵路服伺服器，以 重度機械症科技模組 (Create) 為基礎，並大量添加鐵路、休閒相關模組，並添加大量自然生成結構會生成多樣村莊，以農業、煮飯為主要休閒、養老玩法。</p>
+            <Code
+              code={`mc8.yuaner.tw`}
+              class="p-4 rounded-lg text-sm shadow-sm"
+            />
+            <p><i class="fa-solid fa-circle-info"></i> 備用網址: wss://mc8-ws.yuaner.tw</p>
+
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box border p-4" >
+              <legend class="fieldset-legend">子專案</legend>
+              <div class="flex w-full flex-col lg:flex-row">
+
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-4 bg-base-100 rounded-[10px] shadow-sm">
+                  <figure class="col-span-6 md:col-span-2">
+                    <Image
+                      src={mcbapi}
+                      class="w-full h-full object-cover"
+                      alt="Minecraft API Doc"
+                    />
+                  </figure>
+                  <div class="col-span-6 md:col-span-4 flex-1 flex flex-col justify-center">
+                    <div class="card-body">
+                      <div class="flex flex-wrap gap-x-6">
+                        <h5 class="card-title">資訊橋接後端API伺服器</h5>
+                        <span class="content-end"
+                          ><span data-uptimeflare-id="yuan_mc8_api"></span></span
+                        >
+                      </div>
+                      <p>輔助Minecraft伺服器的PHP後端。主要有模組列表、zip打包下載功能提供給我們自己的客戶端模組同步程式、我們的官網使用。額外提供伺服器上線人數查詢。</p>
+                      <p>
+                        ➤ <a
+                          class="link link-primary"
+                          href="https://mc8-api.yuaner.tw/">更多介紹</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="divider lg:divider-horizontal"></div>
+                <MainCard isSub mainImgSrc={mcpysync}>
+                  <h5 class="card-title">客戶端模組同步程式</h5>
+                  <p>我們經營的伺服器為NeoForge模組伺服器，使用者必須安裝對應的模組才能連進我們的伺服器遊玩。考量我們伺服器對於模組需求的更動頻繁，故特別寫了這支小程式來減輕使用者每次都要手動下載檔案的麻煩。</p>
+                </MainCard> -->
+              </div>
+            </fieldset>
+          </MainCard>
+
+          <!-- 幽影櫻minecraft server -->
+          <!-- <MainCard
             mainImgSrc="https://barian0517.github.io/mcserverweb/Minecraft%20Screenshot%202025.06.26%20-%2001.23.07.95.png"
             mainImgAlt="Minecraft"
             buttons={[
@@ -142,10 +216,9 @@ import fimg from "../assets/works/yuan-fimg.png";
             </div>
             <p>融合 魔法、拔刀劍 與槍械 的極致體驗。</p>
             <Code
-              code={`mc.yuaner.tw`}
+              code={`closingsongserver.barian.moe`}
               class="p-4 rounded-lg text-sm shadow-sm"
             />
-            <p><i class="fa-solid fa-circle-info"></i> 備用網址: closingsongserver.barian.moe:23565</p>
 
             <fieldset class="fieldset bg-base-200 border-base-300 rounded-box border p-4" >
               <legend class="fieldset-legend">子專案</legend>
@@ -176,15 +249,9 @@ import fimg from "../assets/works/yuan-fimg.png";
                     </div>
                   </div>
                 </div>
-
-                <!-- <div class="divider lg:divider-horizontal"></div>
-                <MainCard isSub mainImgSrc={mcpysync}>
-                  <h5 class="card-title">客戶端模組同步程式</h5>
-                  <p>我們經營的伺服器為NeoForge模組伺服器，使用者必須安裝對應的模組才能連進我們的伺服器遊玩。考量我們伺服器對於模組需求的更動頻繁，故特別寫了這支小程式來減輕使用者每次都要手動下載檔案的麻煩。</p>
-                </MainCard> -->
               </div>
             </fieldset>
-          </MainCard>
+          </MainCard> -->
 
           <!-- Fimg 佔位圖URL產生器 -->
           <MainCard
